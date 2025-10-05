@@ -9,6 +9,7 @@ function Cylinder(props){
   meshRef=useRef();
   const [hovered,sethovered]=useState(false);
   const [clicked,setclicked]=useState(false);
+  useFrame(()=>(meshRef.current.rotation.x=meshRef.current.rotation.y+=.01));//Implementaing Cylinder's Rotation at Y-axis
 }
 
 function App() {
