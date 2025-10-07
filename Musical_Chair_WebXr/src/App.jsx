@@ -20,7 +20,9 @@ function App() {
     <mesh
       {...props}
       ref={meshRef}
+            scale={clicked? 1.5:1}
       ></mesh>
+
    
       
     </>
