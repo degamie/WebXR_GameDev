@@ -22,6 +22,7 @@ function App() {
       ref={meshRef}
             scale={clicked? 1.5:1}
             onClick={event=> setclicked(!Clicked)}
+            onPointerOver={(event)=>setHover(true);}
       ></mesh>
 
    
