@@ -23,6 +23,9 @@ function App() {
             scale={clicked? 1.5:1}
             onClick={event=> setclicked(!Clicked)}
             onPointerOver={(event)=>setHover(true);}
+            onPointerOut={(event)=>setHover(false);}
+            <boxGeometry args={[1,1,1]}/>
+            <meshStandardMaterial color={hovered ? 'blue' :'aqua'}/>
       ></mesh>
 
    
