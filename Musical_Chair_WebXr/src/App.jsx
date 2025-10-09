@@ -27,13 +27,15 @@ function App() {
             <boxGeometry args={[1,1,1]}/>
             <meshStandardMaterial color={hovered ? 'blue' :'aqua'}/>
       ></mesh>
-
-   
-      
     </>
   )
 }
 <div>
+    return(
+        <Canvas>
+            <ambientLight intensity={.5}/>
+            <pointLight position={(1,1,1)}/>
+        )
         {/* <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
