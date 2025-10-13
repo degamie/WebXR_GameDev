@@ -5,9 +5,12 @@ const getScene(scene){return scene;}
 
 BABYLON.PostProcess=function(name,fragmentUrl,Parameters,samplers,ratio,camera,samplingMode,engine,resuable);
 const xrCam=new WebXRCamera("Camera1",scene,xrSessionManager);
+const directionX=xrCam.getDirection(Axis.X)+"Camera Direction On Right";//
 const directionY=xrCam.getDirection(Axis.Y)+"Camera Direction On Left";//Impl(26/09/2025)
 const directionZ=xrCam.getDirection(Axis.Z)+"Camera Direction in Front";
-const directionY=xrCam.getDirection(Axis.X)+"Camera Direction On Right";//
+
+const getDirectionX(directionX){return directionX;}//Fetching DirX
+
 const direction_opp_Z=xrCam.getDirection(-(Axis.Z))+"Camera Direction On Back";
 const Height=xrCam.realWorldHeight;
 xrCam.setTransformationFromNonVRCamera(xrCam,true);
