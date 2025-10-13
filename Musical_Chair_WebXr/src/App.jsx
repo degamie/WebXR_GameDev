@@ -14,13 +14,14 @@ function Cylinder(props){
 
 function App() {
   const [count, setCount] = useState(0)
-
+   const getScale(scale){return scale;}
   return (
      <>
     <mesh
       {...props}
       ref={meshRef}
             scale={clicked? 1.5:1}
+
             onClick={event=> setclicked(!Clicked)}
             onPointerOver={(event)=>setHover(true);}
             onPointerOut={(event)=>setHover(false);}>
