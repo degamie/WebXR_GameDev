@@ -3,7 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-//WID(10/10/2025)
+//WID(14/10/2025)
 //(WebXR:) ThreeJs(Fibre)
 function Cylinder(props){
   meshRef=useRef();
@@ -15,6 +15,7 @@ function Cylinder(props){
 function App() {
   const [count, setCount] = useState(0)
    const getScale(scale){return scale;}
+   const setBoxGeometry(boxGeometry){this.boxGeometry=boxGeometry;}//Binding  boxGeometry in Chair
   return (
      <>
     <mesh
