@@ -1,11 +1,16 @@
-//WID(04/10/2025)(By Sarthak Mittal(DegamieSign))
+//WID(16/10/2025)(By Sarthak Mittal(DegamieSign))
+const setScene(scene){this.scene;}//Binding Scene
 const scene=new BABYLON.scene(engine);
-
+const getScene(scene){return scene;}
+const setScene(scene){this.scene=scene;}
 BABYLON.PostProcess=function(name,fragmentUrl,Parameters,samplers,ratio,camera,samplingMode,engine,resuable);
 const xrCam=new WebXRCamera("Camera1",scene,xrSessionManager);
+const directionX=xrCam.getDirection(Axis.X)+"Camera Direction On Right";//
 const directionY=xrCam.getDirection(Axis.Y)+"Camera Direction On Left";//Impl(26/09/2025)
 const directionZ=xrCam.getDirection(Axis.Z)+"Camera Direction in Front";
-const directionY=xrCam.getDirection(Axis.X)+"Camera Direction On Right";//
+
+const getDirectionX(directionX){return directionX;}//Fetching DirX
+
 const direction_opp_Z=xrCam.getDirection(-(Axis.Z))+"Camera Direction On Back";
 const Height=xrCam.realWorldHeight;
 xrCam.setTransformationFromNonVRCamera(xrCam,true);
