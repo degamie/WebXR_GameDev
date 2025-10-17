@@ -14,6 +14,7 @@ function Cylinder(props){
 
 function App() {
     const manager= new LoadingManager();
+    const mdlLoader=new GLTFLoader(manager.setPath("/mdl/Chair.fbx");
   const [count, setCount] = useState(0)
    const getScale(scale){return scale;}
    const setBoxGeometry(boxGeometry){this.boxGeometry=boxGeometry;}//Binding  boxGeometry in Chair
