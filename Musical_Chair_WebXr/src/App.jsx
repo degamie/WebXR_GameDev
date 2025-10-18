@@ -8,6 +8,7 @@ import './App.css'
 function setupScene({scene,camera,renderer,player,controller}){
     const listener=new Three.AudioListener();
     camera.add(listener);
+    const scoreSnd=new THREE.PositionalAudio(listnener);//Adding ScoreBoardSound 
     }
 function Cylinder(props){
   meshRef=useRef();
