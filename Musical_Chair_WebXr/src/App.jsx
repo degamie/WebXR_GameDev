@@ -10,10 +10,11 @@ function setupScene({scene,camera,renderer,player,controller}){
     camera.add(listener);
     const scoreSnd=new THREE.PositionalAudio(listnener);//Adding ScoreBoardSound
     audioLoader.load("assets/score.mp3",buffer=>{});//loading ScoreBoardSound
+    scoreTxt.add(scoreSnd);
     }
 function Cylinder(props){
   meshRef=useRef();
-  const [hovered,sethovered]=useState(false);
+  const [hovered,sethovered]=useState(false);   
   const [clicked,setclicked]=useState(false);
   useFrame(()=>(meshRef.current.rotation.x=meshRef.current.rotation.y+=.01));//Implementaing Cylinder's Rotation at Y-axis
 }
