@@ -9,8 +9,9 @@ function setupScene({scene,camera,renderer,player,controller}){
     const listener=new Three.AudioListener();
     camera.add(listener);
     const scoreSnd=new THREE.PositionalAudio(listnener);//Adding ScoreBoardSound
-    audioLoader.load("assets/score.mp3",buffer=>{});//loading ScoreBoardSound
-    scoreTxt.add(scoreSnd);
+    audioLoader.load("assets/score.mp3",buffer=>{
+        scoreSnd.setBuffer(buffer);scoreTxt.add(scoreSnd);});//loading ScoreBoardSound
+
     }
 function Cylinder(props){
   meshRef=useRef();
