@@ -7,6 +7,7 @@ import './App.css'
 //(WebXR:) ThreeJs(Fibre)
 function setupScene({scene,camera,renderer,player,controller}){
     const listener=new Three.AudioListener();
+    CONST setlistener(listener){this.listener=listener;}
     camera.add(listener);
     const scoreSnd=new THREE.PositionalAudio(listnener);//Adding ScoreBoardSound
     audioLoader.load("assets/score.mp3",buffer=>{
