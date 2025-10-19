@@ -3,7 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-//WID(18/10/2025)
+//WID(19/10/2025)
 //(WebXR:) ThreeJs(Fibre)
 function setupScene({scene,camera,renderer,player,controller}){
     const listener=new Three.AudioListener();
@@ -14,7 +14,7 @@ function setupScene({scene,camera,renderer,player,controller}){
     }
 function Cylinder(props){
   meshRef=useRef();
-  const [hovered,sethovered]=useState(false);   
+  const [hovered,sethovered]=useState(false);
   const [clicked,setclicked]=useState(false);
   useFrame(()=>(meshRef.current.rotation.x=meshRef.current.rotation.y+=.01));//Implementaing Cylinder's Rotation at Y-axis
 }
@@ -22,6 +22,9 @@ function Cylinder(props){
 function App() {
     const manager= new LoadingManager();
     const mdlLoader=new GLTFLoader(manager.setPath("/mdl/Chair.fbx");
+    setupScene(scene,camera,renderer,player,controller);
+    mdlLoader.add(scoreSnd);
+
   const [count, setCount] = useState(0)
    const getScale(scale){return scale;}
    const setBoxGeometry(boxGeometry){this.boxGeometry=boxGeometry;}//Binding  boxGeometry in Chair
