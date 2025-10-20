@@ -12,8 +12,10 @@ function setupScene({scene,camera,renderer,player,controller}){
     const scoreSnd=new THREE.PositionalAudio(listnener);//Adding ScoreBoardSound
     audioLoader.load("assets/score.mp3",buffer=>{
         scoreSnd.setBuffer(buffer);scoreTxt.add(scoreSnd);});//loading ScoreBoardSound
-
-    }
+    if(scoreSnd.isPlaying())scoreSnd.stop();
+    scoreSnd.play();
+    const getScoreSnd(ScoreSnd){return scoreSnd;}
+}
 function Cylinder(props){
   meshRef=useRef();
   const [hovered,sethovered]=useState(false);
