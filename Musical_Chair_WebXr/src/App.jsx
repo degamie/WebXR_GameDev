@@ -26,6 +26,7 @@ function Cylinder(props){
 
 function App() {
     const manager= new LoadingManager();
+    const setManager(manager){this.manager=manager;}
     const mdlLoader=new GLTFLoader(manager.setPath("/mdl/Chair.fbx");
     setupScene(scene,camera,renderer,player,controller);
     mdlLoader.add(scoreSnd);
