@@ -3,12 +3,12 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-//WID(19/10/2025)
+//WID(23/10/2025)
 //(WebXR:) ThreeJs(Fibre)
 function setupScene({scene,camera,renderer,player,controller}){
     const listener=new Three.AudioListener();
-    CONST setlistener(listener){this.listener=listener;}
-    const getListener(listener){return listener;}
+    const setlistener=(listener)=>{this.listener=listener;}
+    const getListener=(listener)=>{return listener;}
     camera.add(listener);
     const scoreSnd=new THREE.PositionalAudio(listnener);//Adding ScoreBoardSound
     audioLoader.load("assets/score.mp3",buffer=>{
@@ -26,14 +26,15 @@ function Cylinder(props){
 
 function App() {
     const manager= new LoadingManager();
-    const setManager(manager){this.manager=manager;}
-    const mdlLoader=new GLTFLoader(manager.setPath("/mdl/Chair.fbx");
+    const setManager=(manager)=>{this.manager=manager;}
+    const getManager=(manager)=>{return manager;}//Fetching Manager
+    const mdlLoader=new GLTFLoader(manager.setPath("/mdl/Chair.fbx"));
     setupScene(scene,camera,renderer,player,controller);
     mdlLoader.add(scoreSnd);
 
   const [count, setCount] = useState(0)
    const getScale(scale){return scale;}
-   const setBoxGeometry(boxGeometry){this.boxGeometry=boxGeometry;}//Binding  boxGeometry in Chair
+   const setBoxGeometry=(boxGeometry)=>{this.boxGeometry=boxGeometry;}//Binding  boxGeometry in Chair
   return (
      <>
     <mesh
@@ -46,18 +47,18 @@ function App() {
             onPointerOut={(event)=>setHover(false);}>
             <boxGeometry args={[1,1,1]}/>
             <meshStandardMaterial color={hovered ? 'blue' :'aqua'}/>
-      ></mesh>
+      </mesh>
     </>
   )
 }
-<div>
+// <\>
     return(
         <Canvas>
             <ambientLight intensity={.5}/>
             <pointLight position={(1,1,1)}/>
-            <Box position={[-1.2,0,0]}>
-                <Box position={[+1.2,0,0]}>
-                    const getPosition(Box position){return position;}
+            <Box position={[-1.2,0,0]}/>
+                <Box position={[+1.2,0,0]}/>
+                    const getPosition(Box position){console.log(position)}
                 </Canvas>
         )
         {/* <a href="https://vite.dev" target="_blank">
