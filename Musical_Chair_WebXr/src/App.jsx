@@ -3,7 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-//WID(23/10/2025)
+//WID(24/10/2025)
 //(WebXR:) ThreeJs(Fibre)
 function setupScene({scene,camera,renderer,player,controller}){
     const listener=new Three.AudioListener();
@@ -16,6 +16,7 @@ function setupScene({scene,camera,renderer,player,controller}){
     if(scoreSnd.isPlaying())scoreSnd.stop();
     scoreSnd.play();
     const getScoreSnd=(ScoreSnd)=>{return scoreSnd;}
+    const setScoreSnd=(ScoreSnd)=>{this.scoreSnd=scoreSnd;}//Binding ScoreSound
 }
 function Cylinder(props){
   meshRef=useRef();
