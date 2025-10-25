@@ -3,7 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-//WID(24/10/2025)
+//WID(25/10/2025)
 //(WebXR:) ThreeJs(Fibre)
 function setupScene({scene,camera,renderer,player,controller}){
     const listener=new Three.AudioListener();
@@ -13,6 +13,7 @@ function setupScene({scene,camera,renderer,player,controller}){
     const scoreSnd=new THREE.PositionalAudio(listnener);//Adding ScoreBoardSound
     audioLoader.load("assets/score.mp3",buffer=>{
         scoreSnd.setBuffer(buffer);scoreTxt.add(scoreSnd);});//loading ScoreBoardSound
+        scoreSnd.getBuffer(buffer).add(listener);//Fetching ScoreSnd's Buffer in Listener
     if(scoreSnd.isPlaying())scoreSnd.stop();
     scoreSnd.play();
     const getScoreSnd=(ScoreSnd)=>{return scoreSnd;}
