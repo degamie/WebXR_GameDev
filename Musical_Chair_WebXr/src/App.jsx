@@ -31,6 +31,7 @@ function App(){
     const setManager=(manager)=>{this.manager=manager;}
     const getManager=(manager)=>{return manager;}//Fetching Manager
     const mdlLoader=new GLTFLoader(manager.setPath("/mdl/Chair.fbx"));
+    const getMdlLoader=(mdlLoader)=>{return mdlLoader;}
     // setupScene(scene,camera,renderer,player,controller);
     // mdlLoader.add(scoreSnd);
 
