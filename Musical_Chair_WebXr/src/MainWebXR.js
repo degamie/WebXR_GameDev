@@ -1,4 +1,4 @@
-//WID(16/10/2025)(By Sarthak Mittal(DegamieSign))
+//WID(30/10/2025)(By Sarthak Mittal(DegamieSign))
 const setScene(scene){this.scene;}//Binding Scene
 const scene=new BABYLON.scene(engine);
 const getScene(scene){return scene;}
@@ -10,7 +10,7 @@ const directionY=xrCam.getDirection(Axis.Y)+"Camera Direction On Left";//Impl(26
 const directionZ=xrCam.getDirection(Axis.Z)+"Camera Direction in Front";
 
 const getDirectionX(directionX){return directionX;}//Fetching DirX
-
+const setDirectionZ=(directionZ)=>{this.directionZ=directionZ;}//binding  DirectionZ
 const direction_opp_Z=xrCam.getDirection(-(Axis.Z))+"Camera Direction On Back";
 const Height=xrCam.realWorldHeight;
 xrCam.setTransformationFromNonVRCamera(xrCam,true);
