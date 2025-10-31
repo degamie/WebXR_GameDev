@@ -16,7 +16,7 @@ const Height=xrCam.realWorldHeight;
 xrCam.setTransformationFromNonVRCamera(xrCam,true);
 xrCam.getTransformationFromNonVRCamera(xrCam,true);//Fetching Non-VR Canera's Transformation
 const Width=xrCam.realWorldWidth;
-
+const getWidth=(width)=>{return width;}//printing Width
 const Light=new BABYLON.PointLight("pointLight",new BABYLON.Vector3(1,10,5),scene);//impl(28/09/2025)
 const shape=new BABYLON.Cylinder(
 new BABYLON.Vector3(0,-.9,0),
