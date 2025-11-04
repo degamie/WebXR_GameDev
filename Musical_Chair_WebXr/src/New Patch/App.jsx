@@ -37,6 +37,7 @@ function App(){
     const mdlLoader=new GLTFLoader(manager.setPath("/mdl/Chair.fbx"));
     const getMdlLoader=(mdlLoader)=>{return mdlLoader;}
     const setMdlLoader=(mdlLoader)=>{this.mdlLoader=mdlLoader;}
+    const updateALlByMdlLoader=(mdlLoader)=>{getMdlLoader(mdlLoader)+setMdlLoader(mdlLoader);}//Updating ALl By Mdl Loader
     // setupScene(scene,camera,renderer,player,controller);
     // mdlLoader.add(scoreSnd);
 
