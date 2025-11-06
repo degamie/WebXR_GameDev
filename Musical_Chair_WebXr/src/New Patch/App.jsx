@@ -3,12 +3,13 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-//WID(4/11/2025)
+//WID(6/11/2025)
 //(WebXR:) ThreeJs(Fibre)
 function setupScene({scene,camera,renderer,player,controller}){
     const listener=new Three.AudioListener();
     const setlistener=(listener)=>{this.listener=listener;}
     const getListener=(listener)=>{return listener;}
+    const updateListener=(listener)=>{getListener(listener)+setlistener(listener);}
     camera.add(listener);
     listener.add(ScoreSnd);
     const scoreSnd=new THREE.PositionalAudio(listnener);//Adding ScoreBoardSound
