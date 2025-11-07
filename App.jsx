@@ -3,78 +3,69 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-//WID(19/10/2025)
+//WID(7/11/2025)
 //(WebXR:) ThreeJs(Fibre)
 function setupScene({scene,camera,renderer,player,controller}){
     const listener=new Three.AudioListener();
-    CONST setlistener(listener){this.listener=listener;}
+    const setlistener=(listener)=>{this.listener=listener;}
+    const getListener=(listener)=>{return listener;}
+    const updateListener=(listener)=>{getListener(listener)+setlistener(listener);}
     camera.add(listener);
+    listener.add(ScoreSnd);
     const scoreSnd=new THREE.PositionalAudio(listnener);//Adding ScoreBoardSound
     audioLoader.load("assets/score.mp3",buffer=>{
         scoreSnd.setBuffer(buffer);scoreTxt.add(scoreSnd);});//loading ScoreBoardSound
+        scoreSnd.getBuffer(buffer).add(listener);//Fetching ScoreSnd's Buffer in Listener
     if(scoreSnd.isPlaying())scoreSnd.stop();
     scoreSnd.play();
+    const getScoreSnd=(ScoreSnd)=>{return scoreSnd;}
+    const setScoreSnd=(ScoreSnd)=>{this.scoreSnd=scoreSnd;}//Binding ScoreSound
+    const updateAllByScoreSnd=(ScoreSnd)=>{getScoreSnd(ScoreBoardSound)+setScoreSnd(ScoreBoardSound)+1};//Updating ScoreSnd in Server
 }
 function Cylinder(props){
   meshRef=useRef();
+
+  const setMeshRef=(meshRef)=>{this.meshRef=meshRef;}//Binding MeshRef
+  const getMeshRef=(meshRef)=>{return meshRef;}//Fetching MeshRef
   const [hovered,sethovered]=useState(false);
   const [clicked,setclicked]=useState(false);
   useFrame(()=>(meshRef.current.rotation.x=meshRef.current.rotation.y+=.01));//Implementaing Cylinder's Rotation at Y-axis
 }
 
-function App() {
+function App(){
     const manager= new LoadingManager();
-    const mdlLoader=new GLTFLoader(manager.setPath("/mdl/Chair.fbx");
-    setupScene(scene,camera,renderer,player,controller);
-    mdlLoader.add(scoreSnd);
+    const setManager=(manager)=>{this.manager=manager;}
+    const getManager=(manager)=>{return manager;}//Fetching Manager
+    const mdlLoader=new GLTFLoader(manager.setPath("/mdl/Chair.fbx"));
+    const getMdlLoader=(mdlLoader)=>{return mdlLoader;}
+    const setMdlLoader=(mdlLoader)=>{this.mdlLoader=mdlLoader;}
+    const updateALlByMdlLoader=(mdlLoader)=>{getMdlLoader(mdlLoader)+setMdlLoader(mdlLoader);}//Updating ALl By Mdl Loader
+    // setupScene(scene,camera,renderer,player,controller);
+    // mdlLoader.add(scoreSnd);
 
   const [count, setCount] = useState(0)
-   const getScale(scale){return scale;}
-   const setBoxGeometry(boxGeometry){this.boxGeometry=boxGeometry;}//Binding  boxGeometry in Chair
+   const getScale=(scale)=>{return scale;}
+   const setScale=(scale)=>{this.scale=scale;}//Binding Scale in Chair
+   const setBoxGeometry=(boxGeometry)=>{this.boxGeometry=boxGeometry;}//Binding  boxGeometry in Chair
+  
+  const Box = (props) => {
+    return (
+      <mesh {...props} ref={meshRef} scale={clicked ? 1.5 : 1} onClick={() => setclicked(!clicked)} onPointerOver={(event) => sethovered(true)} onPointerOut={(event) => sethovered(false)}>
+        <boxGeometry args={[1, 1, 1]} />
+        <meshStandardMaterial color={hovered ? 'blue' : 'aqua'} />
+      </mesh>
+    );
+  }
+
   return (
-     <>
-    <mesh
-      {...props}
-      ref={meshRef}
-            scale={clicked? 1.5:1}
-
-            onClick={event=> setclicked(!Clicked)}
-            onPointerOver={(event)=>setHover(true);}
-            onPointerOut={(event)=>setHover(false);}>
-            <boxGeometry args={[1,1,1]}/>
-            <meshStandardMaterial color={hovered ? 'blue' :'aqua'}/>
-      ></mesh>
+   <>
+      <Canvas>
+        <ambientLight intensity={.5}/>
+        <pointLight position={[1,1,1]}/>
+        <Box position={[-1.2,0,0]} />
+        <Box position={[+1.2,0,0]} />
+      </Canvas>
     </>
-  )
+  );
 }
-<div>
-    return(
-        <Canvas>
-            <ambientLight intensity={.5}/>
-            <pointLight position={(1,1,1)}/>
-            <Box position={[-1.2,0,0]}>
-                <Box position={[+1.2,0,0]}>
-                    const getPosition(Box position){return position;}
-                </Canvas>
-        )
-        {/* <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p> */}
-
-export default App
+export default App;
