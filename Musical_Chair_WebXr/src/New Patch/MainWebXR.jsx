@@ -1,10 +1,11 @@
-//WID(7/11/2025)(By Sarthak Mittal(DegamieSign))
+//WID(8/11/2025)(By Sarthak Mittal(DegamieSign))#1
 const setScene(scene){this.scene;}//Binding Scene
 const scene=new BABYLON.scene(engine);
 const getScene(scene){return scene;}
 const setScene(scene){this.scene=scene;}
 BABYLON.PostProcess=function(name,fragmentUrl,Parameters,samplers,ratio,camera,samplingMode,engine,resuable);
 const xrCam=new WebXRCamera("Camera1",scene,xrSessionManager);
+const getxrCam=(xrCam)=>{return xrCam;}//Fetching XRCamera
 const directionX=xrCam.getDirection(Axis.X)+"Camera Direction On Right";//
 const directionY=xrCam.getDirection(Axis.Y)+"Camera Direction On Left";//Impl(26/09/2025)
 const directionZ=xrCam.getDirection(Axis.Z)+"Camera Direction in Front";
@@ -13,6 +14,7 @@ const mdlLoader=(mdlLoader)=>{ThreeJs.ModelLoader("WebXR_GameDev/Musical_Chair_W
 
 const getDirectionX(directionX){return directionX;}//Fetching DirX
 const setDirectionY=(directionY)=>{this.directionY=directionY;}//Binding  Yth Direction in WEBXR
+const getDirectionY=(directionY)=>{return directionY;}//Fetching DirectionY in App
 const setDirectionZ=(directionZ)=>{this.directionZ=directionZ;}//binding  DirectionZ
 const getDirectionZ=(directionZ)=>{return directionZ;}//Fetching DirectionZ
 const direction_opp_Z=xrCam.getDirection(-(Axis.Z))+"Camera Direction On Back";
