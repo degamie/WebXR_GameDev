@@ -3,7 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-//WID(6/11/2025)
+//WID(7/11/2025)
 //(WebXR:) ThreeJs(Fibre)
 function setupScene({scene,camera,renderer,player,controller}){
     const listener=new Three.AudioListener();
@@ -20,12 +20,14 @@ function setupScene({scene,camera,renderer,player,controller}){
     scoreSnd.play();
     const getScoreSnd=(ScoreSnd)=>{return scoreSnd;}
     const setScoreSnd=(ScoreSnd)=>{this.scoreSnd=scoreSnd;}//Binding ScoreSound
+    const updateAllByScoreSnd=(ScoreSnd)=>{getScoreSnd(ScoreBoardSound)+setScoreSnd(ScoreBoardSound)+1};//Updating ScoreSnd in Server
 }
 function Cylinder(props){
   meshRef=useRef();
 
   const setMeshRef=(meshRef)=>{this.meshRef=meshRef;}//Binding MeshRef
   const getMeshRef=(meshRef)=>{return meshRef;}//Fetching MeshRef
+  const updateAllMeshRef=(meshRef)=>{getMeshRef(meshRef)+setMeshRef(meshRef)+1;}//Updating MeshRef in WebXR's Server
   const [hovered,sethovered]=useState(false);
   const [clicked,setclicked]=useState(false);
   useFrame(()=>(meshRef.current.rotation.x=meshRef.current.rotation.y+=.01));//Implementaing Cylinder's Rotation at Y-axis
