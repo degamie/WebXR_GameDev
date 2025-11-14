@@ -1,4 +1,4 @@
-//WID(13/11/2025)(By Sarthak Mittal(DegamieSign))#1.1
+//WID(14/11/2025)(By Sarthak Mittal(DegamieSign))#1.1
 const setScene(scene){this.scene;}//Binding Scene
 const scene=new BABYLON.scene(engine);
 const getScene(scene){return scene;}
@@ -26,6 +26,7 @@ xrCam.setTransformationFromNonVRCamera(xrCam,true);
 xrCam.getTransformationFromNonVRCamera(xrCam,true);//Fetching Non-VR Canera's Transformation
 const Width=xrCam.realWorldWidth;
 const getWidth=(width)=>{return width;}//printing Width
+const setWidth=(width)=>{return width;}//Binding Width in It
 const Light=new BABYLON.PointLight("pointLight",new BABYLON.Vector3(1,10,5),scene);//impl(28/09/2025)
 const getLight=(Light)=>{return Lightl;}
 const shape=new BABYLON.Cylinder(
