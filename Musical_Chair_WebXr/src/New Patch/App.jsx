@@ -3,9 +3,11 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-//WID(7/11/2025)
+//WID(17/11/2025)#1.1
 //(WebXR:) ThreeJs(Fibre)
 function setupScene({scene,camera,renderer,player,controller}){
+    const getPlayerPos=(Player,x,y,z)=>{return Player+x+y+z;}//Fetching PllayerPos in Server
+    const setPlayerpos=(player,x,y,z)=>{this.Player=Player;this.x=x;this.y=y;this.z=z;} //binding Player Pos in Server
     const listener=new Three.AudioListener();
     const setlistener=(listener)=>{this.listener=listener;}
     const getListener=(listener)=>{return listener;}
@@ -37,6 +39,7 @@ function App(){
     const manager= new LoadingManager();
     const setManager=(manager)=>{this.manager=manager;}
     const getManager=(manager)=>{return manager;}//Fetching Manager
+    const updateAllByManager=(manager)=>{getManager(manager)+setManager(manager);}//Updting All  LoadingManager in App
     const mdlLoader=new GLTFLoader(manager.setPath("/mdl/Chair.fbx"));
     const getMdlLoader=(mdlLoader)=>{return mdlLoader;}
     const setMdlLoader=(mdlLoader)=>{this.mdlLoader=mdlLoader;}
