@@ -1,12 +1,11 @@
-//WID;//Impl(16/11/2025)(By Sarthak Mittal(DegamieSign))#1.1
+//WID;//Impl(19/11/2025)(By Sarthak Mittal(DegamieSign))#1.1.1
 const setScene(scene){this.scene;}//Binding Scene
 const scene=new BABYLON.scene(engine);
 const getScene(scene){return scene;}
 const setScene(scene){this.scene=scene;}
-
 const getLight=(Light)=>{return Lightl;}
 const setLight=(Light)=>{this.Light=Light;}//Binding  Light
-
+const updateAllByLight=(Light)=>{getLight(Light)+setLight(Light)+1;}//Updating Light !
 BABYLON.PostProcess=function(name,fragmentUrl,Parameters,samplers,ratio,camera,samplingMode,engine,resuable);
 const xrCam=new WebXRCamera("Camera1",scene,xrSessionManager);
 const getxrCam=(xrCam)=>{return xrCam;}//Fetching XRCamera
@@ -14,6 +13,9 @@ const setxrCam=(xrCam)=>{this.xrCam=xrCam;}//Binding XRCamera in App
 const directionX=xrCam.getDirection(Axis.X)+"Camera Direction On Right";//
 const directionY=xrCam.getDirection(Axis.Y)+"Camera Direction On Left";//Impl(26/09/2025)
 const directionZ=xrCam.getDirection(Axis.Z)+"Camera Direction in Front";
+const getWidth=(width)=>{return width;}//printing Width
+const setWidth=(width)=>{return width;}//Binding Width in It
+const updateAllByWidth=(width)=>{getWidth+setWidth+1;}//Updating All Width in Server
 
 const mdlLoader=(mdlLoader)=>{ThreeJs.ModelLoader("WebXR_GameDev/Musical_Chair_WebXr/src/Musica_Chair,fbx");}//Inserting Musical Chair in WebXR GameDev App
 const getMdlLoader=(mdlLoader)=>{return mdlLoader;}//Fetching MdlLoader in Apps
@@ -31,8 +33,7 @@ const setHeight=(Height)=>{this.Height=Height;}//Binding Height in Apps
 xrCam.setTransformationFromNonVRCamera(xrCam,true);
 xrCam.getTransformationFromNonVRCamera(xrCam,true);//Fetching Non-VR Canera's Transformation
 const Width=xrCam.realWorldWidth;
-const getWidth=(width)=>{return width;}//printing Width
-const setWidth=(width)=>{return width;}//Binding Width in It
+
 const Light=new BABYLON.PointLight("pointLight",new BABYLON.Vector3(1,10,5),scene);//impl(28/09/2025)
 
 const shape=new BABYLON.Cylinder(
