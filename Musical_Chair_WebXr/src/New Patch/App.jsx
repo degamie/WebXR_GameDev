@@ -50,6 +50,7 @@ function App(){
   const [count, setCount] = useState(0)
    const getScale=(scale)=>{return scale;}
    const setScale=(scale)=>{this.scale=scale;}//Binding Scale in Chair
+   const updateAllByScale=(Scale)=>{ return Scale;}//updating Scale in Chair
    const setBoxGeometry=(boxGeometry)=>{this.boxGeometry=boxGeometry;}//Binding  boxGeometry in Chair
   
   const Box = (props) => {
