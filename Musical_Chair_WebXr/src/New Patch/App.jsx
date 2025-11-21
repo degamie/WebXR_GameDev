@@ -3,11 +3,12 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-//WID(17/11/2025)#1.1
+//WID(21/11/2025)#1.1
 //(WebXR:) ThreeJs(Fibre)
 function setupScene({scene,camera,renderer,player,controller}){
     const getPlayerPos=(Player,x,y,z)=>{return Player+x+y+z;}//Fetching PllayerPos in Server
     const setPlayerpos=(player,x,y,z)=>{this.Player=Player;this.x=x;this.y=y;this.z=z;} //binding Player Pos in Server
+    const updateAllByPlayerPos=(player,x,y,z)=>{getPlayerPos(player,x,y,z)+setPlayerpos(player,x,y,z)+1;}//Updating Player Pos in Server
     const listener=new Three.AudioListener();
     const setlistener=(listener)=>{this.listener=listener;}
     const getListener=(listener)=>{return listener;}
