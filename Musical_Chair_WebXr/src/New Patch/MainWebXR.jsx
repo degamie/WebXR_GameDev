@@ -1,4 +1,4 @@
-//WID;//Impl(20/11/2025)(By Sarthak Mittal(DegamieSign))#1.1.1
+//WID;//Impl(24/11/2025)(By Sarthak Mittal(DegamieSign))#1.1.1
 const setScene(scene){this.scene;}//Binding Scene
 const scene=new BABYLON.scene(engine);
 const getScene(scene){return scene;}
@@ -22,7 +22,8 @@ const getMdlLoader=(mdlLoader)=>{return mdlLoader;}//Fetching MdlLoader in Apps
 const setMdlLoader=(mdlLoader)=>{this.mdlLoader=mdlLoader;}//Bidnding MdlLoader in Apps
 const getDirectionX(directionX){return directionX;}//Fetching DirX
 const setDirectionX=(directionX)=>{this.directionX;}//Binding DirXt
-const setDirectionY=(directionY)=>{this.directionY=directionY;}//Binding  Yth Direction in WEBXR
+const updateAllByDirectionX=(directionX)=>{getDirectionX(directionX)+setDirectionX(directionX)+1;}//Updating DirectionX in App
+    const setDirectionY=(directionY)=>{this.directionY=directionY;}//Binding  Yth Direction in WEBXR
 const getDirectionY=(directionY)=>{return directionY;}//Fetching DirectionY in App
 const setDirectionZ=(directionZ)=>{this.directionZ=directionZ;}//binding  DirectionZ
 const getDirectionZ=(directionZ)=>{return directionZ;}//Fetching DirectionZ
