@@ -1,4 +1,4 @@
-//WID;//Impl(29/11/2025)(By Sarthak Mittal(DegamieSign))#1.1.1
+//WID;//Impl(30/11/2025)(By Sarthak Mittal(DegamieSign))#1.1.1
 const setScene(scene){this.scene;}//Binding Scene
 const scene=new BABYLON.scene(engine);
 const getScene(scene){return scene;}
@@ -14,8 +14,6 @@ const updateAllByCamera=(xrCam)=>{getxrCam(xrCam)+setxrCam(xrCam)+1;}//Updating 
 const directionX=xrCam.getDirection(Axis.X)+"Camera Direction On Right";//
 const directionY=xrCam.getDirection(Axis.Y)+"Camera Direction On Left";//Impl(26/09/2025)
 const directionZ=xrCam.getDirection(Axis.Z)+"Camera Direction in Front";
-const getWidth=(width)=>{return width;}//printing Width
-const setWidth=(width)=>{return width;}//Binding Width in It
 const updateAllByWidth=(width)=>{getWidth+setWidth+1;}//Updating All Width in Server
 
 const mdlLoader=(mdlLoader)=>{ThreeJs.ModelLoader("WebXR_GameDev/Musical_Chair_WebXr/src/Musica_Chair,fbx");}//Inserting Musical Chair in WebXR GameDev App
@@ -27,6 +25,10 @@ const setDirectionX=(directionX)=>{this.directionX;}//Binding DirXt
 const updateAllByDirectionX=(directionX)=>{getDirectionX(directionX)+setDirectionX(directionX)+1;}//Updating DirectionX in App
     const setDirectionY=(directionY)=>{this.directionY=directionY;}//Binding  Yth Direction in WEBXR
 const getDirectionY=(directionY)=>{return directionY;}//Fetching DirectionY in App
+const updateAllByDirectionY=(directionY)=>{getDirectionY(directionY)+setDirectionY(directionY)+1;]//updating Directipn Y in App
+const getWidth=(width)=>{return width;}//printing Width
+const setWidth=(width)=>{return width;}//Binding Width in It
+
 const setDirectionY=(directionY)=>{this.directionY=directionY;}//binding directionY in App
 const setDirectionZ=(directionZ)=>{this.directionZ=directionZ;}//binding  DirectionZ
 const getDirectionZ=(directionZ)=>{return directionZ;}//Fetching DirectionZ
