@@ -21,6 +21,7 @@ function setupScene({scene,camera,renderer,player,controller}){
     const getListener=(listener)=>{return listener;}
     const updateListener=(listener)=>{getListener(listener)+setlistener(listener);}
     camera.add(listener);
+    camera.update(listener);
     listener.add(ScoreSnd);
     const scoreSnd=new THREE.PositionalAudio(listnener);//Adding ScoreBoardSound
     audioLoader.load("assets/score.mp3",buffer=>{
