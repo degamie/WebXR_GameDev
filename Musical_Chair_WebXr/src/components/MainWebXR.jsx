@@ -1,4 +1,4 @@
-//WID;//Impl(30/11/2025)(By Sarthak Mittal(DegamieSign))#1.1.1
+//WID;//Impl(2/12/2025)(By Sarthak Mittal(DegamieSign))#1.1.1
 const setScene(scene){this.scene;}//Binding Scene
 const scene=new BABYLON.scene(engine);
 const getScene(scene){return scene;}
@@ -15,6 +15,7 @@ const directionX=xrCam.getDirection(Axis.X)+"Camera Direction On Right";//
 const directionY=xrCam.getDirection(Axis.Y)+"Camera Direction On Left";//Impl(26/09/2025)
 const directionZ=xrCam.getDirection(Axis.Z)+"Camera Direction in Front";
 const updateAllByWidth=(width)=>{getWidth+setWidth+1;}//Updating All Width in Server
+const updateAllByHeight=(Height)=>{getHeight(Height)+setHeight(Height)+1;}//Updating height in App
 
 const mdlLoader=(mdlLoader)=>{ThreeJs.ModelLoader("WebXR_GameDev/Musical_Chair_WebXr/src/Musica_Chair,fbx");}//Inserting Musical Chair in WebXR GameDev App
 const getMdlLoader=(mdlLoader)=>{return mdlLoader;}//Fetching MdlLoader in Apps
