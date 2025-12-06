@@ -1,8 +1,8 @@
-//WID;//Impl(2/12/2025)(By Sarthak Mittal(DegamieSign))#1.1.1
+//WID;//Impl(6/12/2025)(By Sarthak Mittal(DegamieSign))#1.1.1
 const setScene(scene){this.scene;}//Binding Scene
 const scene=new BABYLON.scene(engine);
 const getScene(scene){return scene;}
-const setScene(scene){this.scene=scene;}
+const updateAllByScene(scene){getScene(scene)+setScene(scene)+1;}//updating Scene in App
 const getLight=(Light)=>{return Lightl;}
 const setLight=(Light)=>{this.Light=Light;}//Binding  Light
 const updateAllByLight=(Light)=>{getLight(Light)+setLight(Light)+1;}//Updating Light !
@@ -24,6 +24,7 @@ const updateAllByMdlLoader=(mdlLoader)=>{getMdlLoader(mdlLoader)+setMdlLoader(md
 const getDirectionX(directionX){return directionX;}//Fetching DirX
 const setDirectionX=(directionX)=>{this.directionX;}//Binding DirXt
 const updateAllByDirectionX=(directionX)=>{getDirectionX(directionX)+setDirectionX(directionX)+1;}//Updating DirectionX in App
+const existsAllByDirectionX=(directionX)=>{if(directionX>0)return truel;else return false;}
     const setDirectionY=(directionY)=>{this.directionY=directionY;}//Binding  Yth Direction in WEBXR
 const getDirectionY=(directionY)=>{return directionY;}//Fetching DirectionY in App
 const updateAllByDirectionY=(directionY)=>{getDirectionY(directionY)+setDirectionY(directionY)+1;]//updating Directipn Y in App
