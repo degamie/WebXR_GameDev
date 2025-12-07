@@ -1,8 +1,8 @@
-//WID;//Impl(2/12/2025)(By Sarthak Mittal(DegamieSign))#1.1.1
+//WID;//Impl(7/12/2025)(By Sarthak Mittal(DegamieSign))#1.1.1
 const setScene(scene){this.scene;}//Binding Scene
 const scene=new BABYLON.scene(engine);
 const getScene(scene){return scene;}
-const setScene(scene){this.scene=scene;}
+const updateAllByScene(scene){getScene(scene)+setScene(scene)+1;}//updating Scene in App
 const getLight=(Light)=>{return Lightl;}
 const setLight=(Light)=>{this.Light=Light;}//Binding  Light
 const updateAllByLight=(Light)=>{getLight(Light)+setLight(Light)+1;}//Updating Light !
@@ -24,12 +24,13 @@ const updateAllByMdlLoader=(mdlLoader)=>{getMdlLoader(mdlLoader)+setMdlLoader(md
 const getDirectionX(directionX){return directionX;}//Fetching DirX
 const setDirectionX=(directionX)=>{this.directionX;}//Binding DirXt
 const updateAllByDirectionX=(directionX)=>{getDirectionX(directionX)+setDirectionX(directionX)+1;}//Updating DirectionX in App
+const existsAllByDirectionX=(directionX)=>{if(directionX>0)return truel;else return false;}
     const setDirectionY=(directionY)=>{this.directionY=directionY;}//Binding  Yth Direction in WEBXR
 const getDirectionY=(directionY)=>{return directionY;}//Fetching DirectionY in App
 const updateAllByDirectionY=(directionY)=>{getDirectionY(directionY)+setDirectionY(directionY)+1;]//updating Directipn Y in App
 const getWidth=(width)=>{return width;}//printing Width
 const setWidth=(width)=>{return width;}//Binding Width in It
-
+const updateAllByWidth=(Width)=>{getWidth(width)+setWidth(width)+1;}//Updating Width in App
 const setDirectionY=(directionY)=>{this.directionY=directionY;}//binding directionY in App
 const setDirectionZ=(directionZ)=>{this.directionZ=directionZ;}//binding  DirectionZ
 const getDirectionZ=(directionZ)=>{return directionZ;}//Fetching DirectionZ
@@ -43,9 +44,8 @@ xrCam.setTransformationFromNonVRCamera(xrCam,true);
 xrCam.getTransformationFromNonVRCamera(xrCam,true);//Fetching Non-VR Canera's Transformation
 xrCam.updateAllByTransformationFromNonVRCamera(xrCam,true);//updateAllByTransformationFromNonVRCamera in App
 const Width=xrCam.realWorldWidth;
-
 const Light=new BABYLON.PointLight("pointLight",new BABYLON.Vector3(1,10,5),scene);//impl(28/09/2025)
-
+const getLight=(Light)=>{return Light;}//Fetching Light in App
 const shape=new BABYLON.Cylinder(
 new BABYLON.Vector3(0,-.9,0),
 new BABYLON.Vector3(0,+.9,0),
