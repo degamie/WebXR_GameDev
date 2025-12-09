@@ -30,6 +30,10 @@ const getDirectionY=(directionY)=>{return directionY;}//Fetching DirectionY in A
 const updateAllByDirectionY=(directionY)=>{getDirectionY(directionY)+setDirectionY(directionY)+1;]//updating Directipn Y in App
 const getWidth=(width)=>{return width;}//printing Width
 const setWidth=(width)=>{return width;}//Binding Width in It
+const existsAllByWidth=(width)=>{
+    if(width>0)getWidth(width);
+    else getWidth(0);
+    }
 const updateAllByWidth=(Width)=>{getWidth(width)+setWidth(width)+1;}//Updating Width in App
 const setDirectionY=(directionY)=>{this.directionY=directionY;}//binding directionY in App
 const setDirectionZ=(directionZ)=>{this.directionZ=directionZ;}//binding  DirectionZ
