@@ -1,4 +1,4 @@
-//WID;//Impl(7/12/2025)(By Sarthak Mittal(DegamieSign))#1.1.1
+//WID;//Impl(9/12/2025)(By Sarthak Mittal(DegamieSign))#1.1.1
 const setScene(scene){this.scene;}//Binding Scene
 const scene=new BABYLON.scene(engine);
 const getScene(scene){return scene;}
@@ -30,6 +30,10 @@ const getDirectionY=(directionY)=>{return directionY;}//Fetching DirectionY in A
 const updateAllByDirectionY=(directionY)=>{getDirectionY(directionY)+setDirectionY(directionY)+1;]//updating Directipn Y in App
 const getWidth=(width)=>{return width;}//printing Width
 const setWidth=(width)=>{return width;}//Binding Width in It
+const existsAllByWidth=(width)=>{
+    if(width>0)getWidth(width);
+    else getWidth(0);
+    }
 const updateAllByWidth=(Width)=>{getWidth(width)+setWidth(width)+1;}//Updating Width in App
 const setDirectionY=(directionY)=>{this.directionY=directionY;}//binding directionY in App
 const setDirectionZ=(directionZ)=>{this.directionZ=directionZ;}//binding  DirectionZ
@@ -53,4 +57,6 @@ new BABYLON.Vector3(0,+.9,0),
 );
 const mesh.actionManager=new BABYLON.ActionManager(scene);
 const raycastOutput=new BABYLON.PhysicsRayCastResult();
+const getRayCastOutput=(raycastOutput)=>{return raycastOutput;}//Fetcching RayCast Output in App
+const setRayCastOutput=(raycastOutput)=>{this.raycastOutput=raycastOutput;}//Binding RayCast Output In App
 const headNode=new BABYLON.TransformNode("headNode");
