@@ -3,18 +3,30 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-//WID(21/11/2025)#1.1
+///WID(10/12/2025)#1.1
 //(WebXR:) ThreeJs(Fibre)
 function setupScene({scene,camera,renderer,player,controller}){
     const getPlayerPos=(Player,x,y,z)=>{return Player+x+y+z;}//Fetching PllayerPos in Server
     const setPlayerpos=(player,x,y,z)=>{this.Player=Player;this.x=x;this.y=y;this.z=z;} //binding Player Pos in Server
     const updateAllByPlayerPos=(player,x,y,z)=>{getPlayerPos(player,x,y,z)+setPlayerpos(player,x,y,z)+1;}//Updating Player Pos in Server
+    const updateAllByPlayerPos=(x,PlayerPos)=>{getPlayerPos(x,PlayerPos)+setPlayerpos(x,PlayerPos)+1;}//Updating Player's Xth Pos in Server
+    const existsAllbyPlayerPos=(player,x,y,z)=>{
+         while(player.length!=null){
+             if(x===y && y===z &z===x){
+                 setPlayerpos(player,x,y,z);
+                 }
+             else setPlayerpos(null,0,0,0);
+       }return setPlayerpos(player,x,y,z);
     const listener=new Three.AudioListener();
     const setlistener=(listener)=>{this.listener=listener;}
     const getListener=(listener)=>{return listener;}
     const updateListener=(listener)=>{getListener(listener)+setlistener(listener);}
+    const existsListener=(listener)=>{if(listener>0)getListener(listener);else getListener("0");}//Checking Listener's Existence in App
     camera.add(listener);
+    camera.update(listener);
     listener.add(ScoreSnd);
+    listener.update(ScoreSnd);//Updating ScoreSnd in App
+    camera.exists(listener);//Checking Camera's Listener
     const scoreSnd=new THREE.PositionalAudio(listnener);//Adding ScoreBoardSound
     audioLoader.load("assets/score.mp3",buffer=>{
         scoreSnd.setBuffer(buffer);scoreTxt.add(scoreSnd);});//loading ScoreBoardSound
