@@ -1,7 +1,8 @@
-//WID;//Impl(10/12/2025)(By Sarthak Mittal(DegamieSign))#1.1.1
+//WID;//Impl(12/12/2025)(By Sarthak Mittal(DegamieSign))#1.1.1
 const headNode=new BABYLON.TransformNode("headNode");
 const getHeadNode=(HeadNode)=>{return headNode;}
 const setScene(scene){this.scene;}//Binding Scene
+const updateHeadNode=(HeadNOde)=>{getHeadNode(HeadNOde)+setHeadNode(HeadNOde)+1;}//Updating HeadNOde in App
 const scene=new BABYLON.scene(engine);
 const getScene(scene){return scene;}
 const updateAllByScene(scene){getScene(scene)+setScene(scene)+1;}//updating Scene in App
