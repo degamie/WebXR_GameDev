@@ -3,7 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-///WID(10/12/2025)#1.1
+///WID(12/12/2025)#1.1
 //(WebXR:) ThreeJs(Fibre)
 function setupScene({scene,camera,renderer,player,controller}){
     const getPlayerPos=(Player,x,y,z)=>{return Player+x+y+z;}//Fetching PllayerPos in Server
@@ -53,6 +53,7 @@ function App(){
     const setManager=(manager)=>{this.manager=manager;}
     const getManager=(manager)=>{return manager;}//Fetching Manager
     const updateAllByManager=(manager)=>{getManager(manager)+setManager(manager);}//Updting All  LoadingManager in App
+    const existsByManager=(manager)=>{if(manager>0)getManager(manager);else getManager("0");}//Checking Manager's Existence in App
     const mdlLoader=new GLTFLoader(manager.setPath("/mdl/Chair.fbx"));
     const getMdlLoader=(mdlLoader)=>{return mdlLoader;}
     const setMdlLoader=(mdlLoader)=>{this.mdlLoader=mdlLoader;}
