@@ -1,4 +1,4 @@
-//WID;//Impl(12/12/2025)(By Sarthak Mittal(DegamieSign))#1.1.1.1
+//WID;//Impl(13/12/2025)(By Sarthak Mittal(DegamieSign))#1.1.1.1
 const headNode=new BABYLON.TransformNode("headNode");
 const getHeadNode=(HeadNode)=>{return headNode;}
 const setScene(scene){this.scene;}//Binding Scene
@@ -13,6 +13,7 @@ BABYLON.PostProcess=function(name,fragmentUrl,Parameters,samplers,ratio,camera,s
 const xrCam=new WebXRCamera("Camera1",scene,xrSessionManager);
 const getxrCam=(xrCam)=>{return xrCam;}//Fetching XRCamera
 const setxrCam=(xrCam)=>{this.xrCam=xrCam;}//Binding XRCamera in App
+cosnt updatexrCam=(xrCam)=>{getxrCam(xrCam)+setxrCam(xrCam)+1;}//updating Xr Cam in App
 const updateAllByCamera=(xrCam)=>{getxrCam(xrCam)+setxrCam(xrCam)+1;}//Updating XRCamera in  App
 const directionX=xrCam.getDirection(Axis.X)+"Camera Direction On Right";//
 const directionY=xrCam.getDirection(Axis.Y)+"Camera Direction On Left";//Impl(26/09/2025)
