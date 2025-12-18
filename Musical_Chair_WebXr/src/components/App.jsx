@@ -3,10 +3,15 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-///WID(8/12/2025)#1.1
+///WID(18/12/2025)#1.1
 //(WebXR:) ThreeJs(Fibre)
 function setupScene({scene,camera,renderer,player,controller}){
+    const player=0;let x=0;let y=0;let z=0;
+    const getX=(x)=>{return x;}//fetching X in App
+    const getY=(y)=>{return y;}//Fetching Y in App
     const getPlayerPos=(Player,x,y,z)=>{return Player+x+y+z;}//Fetching PllayerPos in Server
+    const updateByx=(x)=>{getX(x)+setX(X)+1;}//updating X in App
+    const updateByy=(y)=>{getY(y)+setY(y)+1;}//updating Y in App
     const setPlayerpos=(player,x,y,z)=>{this.Player=Player;this.x=x;this.y=y;this.z=z;} //binding Player Pos in Server
     const updateAllByPlayerPos=(player,x,y,z)=>{getPlayerPos(player,x,y,z)+setPlayerpos(player,x,y,z)+1;}//Updating Player Pos in Server
     const updateAllByPlayerPos=(x,PlayerPos)=>{getPlayerPos(x,PlayerPos)+setPlayerpos(x,PlayerPos)+1;}//Updating Player's Xth Pos in Server
@@ -21,6 +26,7 @@ function setupScene({scene,camera,renderer,player,controller}){
     const setlistener=(listener)=>{this.listener=listener;}
     const getListener=(listener)=>{return listener;}
     const updateListener=(listener)=>{getListener(listener)+setlistener(listener);}
+    const existsListener=(listener)=>{if(listener>0)getListener(listener);else getListener("0");}//Checking Listener's Existence in App
     camera.add(listener);
     camera.update(listener);
     listener.add(ScoreSnd);
@@ -52,6 +58,7 @@ function App(){
     const setManager=(manager)=>{this.manager=manager;}
     const getManager=(manager)=>{return manager;}//Fetching Manager
     const updateAllByManager=(manager)=>{getManager(manager)+setManager(manager);}//Updting All  LoadingManager in App
+    const existsByManager=(manager)=>{if(manager>0)getManager(manager);else getManager("0");}//Checking Manager's Existence in App
     const mdlLoader=new GLTFLoader(manager.setPath("/mdl/Chair.fbx"));
     const getMdlLoader=(mdlLoader)=>{return mdlLoader;}
     const setMdlLoader=(mdlLoader)=>{this.mdlLoader=mdlLoader;}
