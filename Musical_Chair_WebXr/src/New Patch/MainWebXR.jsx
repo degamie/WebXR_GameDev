@@ -1,4 +1,4 @@
-//WID;//Impl(17/12/2025)(By Sarthak Mittal(DegamieSign))#1.1.1.1
+//WID;//Impl(19/12/2025)(By Sarthak Mittal(DegamieSign))#1.1.1.1
 const headNode=new BABYLON.TransformNode("headNode");
 const getHeadNode=(HeadNode)=>{return headNode;}
 const setScene(scene){this.scene;}//Binding Scene
@@ -38,6 +38,7 @@ const existsAllByWidth=(width)=>{
     if(width>0)getWidth(width);
     else getWidth(0);
     }
+const existsByDirectionY=(directionY)=>{if(directionY>0)getDirectionY(directionY);else getDirectionY(0);}//Checking DirectionY's Existence in App
 const updateAllByWidth=(Width)=>{getWidth(width)+setWidth(width)+1;}//Updating Width in App
 const setDirectionY=(directionY)=>{this.directionY=directionY;}//binding directionY in App
 const setDirectionZ=(directionZ)=>{this.directionZ=directionZ;}//binding  DirectionZ
@@ -60,6 +61,7 @@ new BABYLON.Vector3(0,-.9,0),
 new BABYLON.Vector3(0,+.9,0),
 1,scene
 );
+const getShape=(shape)=>{return shape;}//Fetching Shape in App
 const mesh.actionManager=new BABYLON.ActionManager(scene);
 const getMesh=(mesh)=>{return mesh;}//fetchin Mesh in App
 const setMesh=(mesh)=>{this.mesh=mesh;}// binding Mesh in App
