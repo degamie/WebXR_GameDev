@@ -3,13 +3,15 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-///WID(19/12/2025)#1.1
+///WID(22/12/2025)#1.1
 //(WebXR:) ThreeJs(Fibre)
 function setupScene({scene,camera,renderer,player,controller}){
     const player=0;let x=0;let y=0;let z=0;
     const getX=(x)=>{return x;}//fetching X in App
     const getY=(y)=>{return y;}//Fetching Y in App
     const getZ=(z)=>{return z;}//Fetching Z in App
+    const setZ=(z)=>{this.z=z;}//Binding  Z in App
+    const updateByz=(z)=>{getZ(z)+setZ(z)+1;}//updating Z in App
     const getPlayerPos=(Player,x,y,z)=>{return Player+x+y+z;}//Fetching PllayerPos in Server
     const updateByx=(x)=>{getX(x)+setX(X)+1;}//updating X in App
     const updateByy=(y)=>{getY(y)+setY(y)+1;}//updating Y in App
