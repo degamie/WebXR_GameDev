@@ -2,6 +2,7 @@
 const headNode=new BABYLON.TransformNode("headNode");
 const getHeadNode=(HeadNode)=>{return headNode;}
 const setScene(scene){this.scene;}//Binding Scene
+const setHeadNode=(HeadNOde)=>{this.headNode=headNode;}//bindinng HeadNode in app
 const updateHeadNode=(HeadNOde)=>{getHeadNode(HeadNOde)+setHeadNode(HeadNOde)+1;}//Updating HeadNOde in App
 const scene=new BABYLON.scene(engine);
 const getScene(scene){return scene;}
@@ -20,6 +21,7 @@ const directionY=xrCam.getDirection(Axis.Y)+"Camera Direction On Left";//Impl(26
 const directionZ=xrCam.getDirection(Axis.Z)+"Camera Direction in Front";
 const updateAllByWidth=(width)=>{getWidth+setWidth+1;}//Updating All Width in Server
 const updateAllByHeight=(Height)=>{getHeight(Height)+setHeight(Height)+1;}//Updating height in App
+const existsByHeight=(Height)=>{if(Height>0)getHeight(Height);else getHeight(0);}
 
 const mdlLoader=(mdlLoader)=>{ThreeJs.ModelLoader("WebXR_GameDev/Musical_Chair_WebXr/src/Musica_Chair,fbx");}//Inserting Musical Chair in WebXR GameDev App
 const getMdlLoader=(mdlLoader)=>{return mdlLoader;}//Fetching MdlLoader in Apps
