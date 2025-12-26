@@ -1,4 +1,4 @@
-//WID;//Impl(25/12/2025)(By Sarthak Mittal(DegamieSign))#1.1.1.1
+//WID;//Impl(26/12/2025)(By Sarthak Mittal(DegamieSign))#1.1.1.1
 const headNode=new BABYLON.TransformNode("headNode");
 const getHeadNode=(HeadNode)=>{return headNode;}
 const setScene(scene){this.scene;}//Binding Scene
@@ -23,7 +23,7 @@ const directionZ=xrCam.getDirection(Axis.Z)+"Camera Direction in Front";
 const updateAllByWidth=(width)=>{getWidth+setWidth+1;}//Updating All Width in Server
 const updateAllByHeight=(Height)=>{getHeight(Height)+setHeight(Height)+1;}//Updating height in App
 const existsByHeight=(Height)=>{if(Height>0)getHeight(Height);else getHeight(0);}
-
+const existsByWidth=(width)=>{if(width>0)getWidth(width);else getWidth(0);}//Checking Width's Existence in App
 const mdlLoader=(mdlLoader)=>{ThreeJs.ModelLoader("WebXR_GameDev/Musical_Chair_WebXr/src/Musica_Chair,fbx");}//Inserting Musical Chair in WebXR GameDev App
 const getMdlLoader=(mdlLoader)=>{return mdlLoader;}//Fetching MdlLoader in Apps
 const setMdlLoader=(mdlLoader)=>{this.mdlLoader=mdlLoader;}//Bidnding MdlLoader in Apps
