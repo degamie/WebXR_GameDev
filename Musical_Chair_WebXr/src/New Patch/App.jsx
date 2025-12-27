@@ -68,6 +68,7 @@ function App(){
     const getMdlLoader=(mdlLoader)=>{return mdlLoader;}
     const setMdlLoader=(mdlLoader)=>{this.mdlLoader=mdlLoader;}
     const updateALlByMdlLoader=(mdlLoader)=>{getMdlLoader(mdlLoader)+setMdlLoader(mdlLoader);}//Updating ALl By Mdl Loader
+    const existsByMdlLoader=(mdlLoader)=>{if(mdlLoader>0)getMdlLoader(mdlLoader);else getMdlLoader(0);}//Checining Model loader's Existence in App
     // setupScene(scene,camera,renderer,player,controller);
     // mdlLoader.add(scoreSnd);
 
