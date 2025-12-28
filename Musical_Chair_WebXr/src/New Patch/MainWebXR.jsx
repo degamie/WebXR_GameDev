@@ -1,4 +1,4 @@
-//WID;//Impl(26/12/2025)(By Sarthak Mittal(DegamieSign))#1.1.1.1
+//WID;//Impl(28/12/2025)(By Sarthak Mittal(DegamieSign))#1.1.1.1
 const headNode=new BABYLON.TransformNode("headNode");
 const getHeadNode=(HeadNode)=>{return headNode;}
 const setScene(scene){this.scene;}//Binding Scene
@@ -28,6 +28,7 @@ const mdlLoader=(mdlLoader)=>{ThreeJs.ModelLoader("WebXR_GameDev/Musical_Chair_W
 const getMdlLoader=(mdlLoader)=>{return mdlLoader;}//Fetching MdlLoader in Apps
 const setMdlLoader=(mdlLoader)=>{this.mdlLoader=mdlLoader;}//Bidnding MdlLoader in Apps
 const updateAllByMdlLoader=(mdlLoader)=>{getMdlLoader(mdlLoader)+setMdlLoader(mdlLoader)+1;}//Updating mdl loader in apps
+const existsByMdlLoader=(mdlLoader)=>{if(MdlLoader.length>0)getMdlLoader(MdlLoader);else getMdlLoader(0);}
 const getDirectionX(directionX){return directionX;}//Fetching DirX
 const setDirectionX=(directionX)=>{this.directionX;}//Binding DirXt
 const updateAllByDirectionX=(directionX)=>{getDirectionX(directionX)+setDirectionX(directionX)+1;}//Updating DirectionX in App
