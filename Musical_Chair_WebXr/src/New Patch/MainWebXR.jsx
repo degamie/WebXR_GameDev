@@ -1,4 +1,4 @@
-//WID;//Impl(29/12/2025)(By Sarthak Mittal(DegamieSign))#1.1.1.1
+//WID;//Impl(30/12/2025)(By Sarthak Mittal(DegamieSign))#1.1.1.1
 const headNode=new BABYLON.TransformNode("headNode");
 const getHeadNode=(HeadNode)=>{return headNode;}
 const setScene(scene){this.scene;}//Binding Scene
@@ -71,6 +71,10 @@ const getShape=(shape)=>{return shape;}//Fetching Shape in App
 const mesh.actionManager=new BABYLON.ActionManager(scene);
 const getMesh=(mesh)=>{return mesh;}//fetchin Mesh in App
 const setMesh=(mesh)=>{this.mesh=mesh;}// binding Mesh in App
+const existsBymesh=(mesh)=>{
+    if(mesh.length>0)getBymesh(mesh);
+    else getBymesh(0);
+    }
 const raycastOutput=new BABYLON.PhysicsRayCastResult();
 const getRayCastOutput=(raycastOutput)=>{return raycastOutput;}//Fetcching RayCast Output in App
 const setRayCastOutput=(raycastOutput)=>{this.raycastOutput=raycastOutput;}//Binding RayCast Output In App
