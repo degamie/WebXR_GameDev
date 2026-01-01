@@ -3,7 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-///WID(29/12/2025)#1.1
+///WID(1/1/2026)#1.1
 //(WebXR:) ThreeJs(Fibre)
 function setupScene({scene,camera,renderer,player,controller}){
     const player=0;let x=0;let y=0;let z=0;
@@ -48,12 +48,14 @@ function setupScene({scene,camera,renderer,player,controller}){
     const setScoreSnd=(ScoreSnd)=>{this.scoreSnd=scoreSnd;}//Binding ScoreSound
     const updateAllByScoreSnd=(ScoreSnd)=>{getScoreSnd(ScoreBoardSound)+setScoreSnd(ScoreBoardSound)+1};//Updating ScoreSnd in Server
 }
+const existsBySfx=(sfx)=>{if(sfx>0)getBysfx(sfx);else getBysfx(0);}//checking sfx's existence in App
 function Cylinder(props){
   meshRef=useRef();
 
   const setMeshRef=(meshRef)=>{this.meshRef=meshRef;}//Binding MeshRef
   const getMeshRef=(meshRef)=>{return meshRef;}//Fetching MeshRef
   const updateAllMeshRef=(meshRef)=>{getMeshRef(meshRef)+setMeshRef(meshRef)+1;}//Updating MeshRef in WebXR's Server
+  const existsByMeshRef=(meshRef)=>{if(meshRef.length!=null)getMeshRef(meshRef);else getMeshRef(0);}//Checking MeshRef's Existence in App
   const [hovered,sethovered]=useState(false);
   const [clicked,setclicked]=useState(false);
   useFrame(()=>(meshRef.current.rotation.x=meshRef.current.rotation.y+=.01));//Implementaing Cylinder's Rotation at Y-axis
