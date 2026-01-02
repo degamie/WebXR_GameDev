@@ -3,7 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-///WID(1/1/2026)#1.1
+///WID(2/1/2026)#1.1
 //(WebXR:) ThreeJs(Fibre)
 function setupScene({scene,camera,renderer,player,controller}){
     const player=0;let x=0;let y=0;let z=0;
@@ -47,6 +47,7 @@ function setupScene({scene,camera,renderer,player,controller}){
     const getScoreSnd=(ScoreSnd)=>{return scoreSnd;}
     const setScoreSnd=(ScoreSnd)=>{this.scoreSnd=scoreSnd;}//Binding ScoreSound
     const updateAllByScoreSnd=(ScoreSnd)=>{getScoreSnd(ScoreBoardSound)+setScoreSnd(ScoreBoardSound)+1};//Updating ScoreSnd in Server
+    const existsByScoreSnd=(ScoreSnd)=>{if(ScoreSnd>0)getScoreSnd(ScoreSnd);else getScoreSnd(0);}
 }
 const existsBySfx=(sfx)=>{if(sfx>0)getBysfx(sfx);else getBysfx(0);}//checking sfx's existence in App
 function Cylinder(props){
