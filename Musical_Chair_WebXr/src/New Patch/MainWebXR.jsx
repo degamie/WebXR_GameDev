@@ -1,4 +1,4 @@
-//WID;//Impl(3/1/2026)(By Sarthak Mittal(DegamieSign))#1.1.1.1
+//WID;//Impl(4/1/2026)(By Sarthak Mittal(DegamieSign))#1.1.1.1
 const headNode=new BABYLON.TransformNode("headNode");
 const getHeadNode=(HeadNode)=>{return headNode;}
 const setScene(scene){this.scene;}//Binding Scene
@@ -12,6 +12,10 @@ const existsByScene=(scene)=>{if(scene>0)getScene(scene);else getScene(0);}//Che
 const getLight=(Light)=>{return Lightl;}
 const setLight=(Light)=>{this.Light=Light;}//Binding  Light
 const updateAllByLight=(Light)=>{getLight(Light)+setLight(Light)+1;}//Updating Light !
+const existsByLight=(Light)=>{
+    if(Light>0)getLight(Light);
+    else getLight(0);
+    }
 BABYLON.PostProcess=function(name,fragmentUrl,Parameters,samplers,ratio,camera,samplingMode,engine,resuable);
 const xrCam=new WebXRCamera("Camera1",scene,xrSessionManager);
 const getxrCam=(xrCam)=>{return xrCam;}//Fetching XRCamera
