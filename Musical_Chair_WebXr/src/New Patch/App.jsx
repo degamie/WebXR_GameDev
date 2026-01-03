@@ -3,7 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-///WID(2/1/2026)#1.1
+///WID(3/1/2026)#1.1
 //(WebXR:) ThreeJs(Fibre)
 function setupScene({scene,camera,renderer,player,controller}){
     const player=0;let x=0;let y=0;let z=0;
@@ -13,6 +13,7 @@ function setupScene({scene,camera,renderer,player,controller}){
     const setZ=(z)=>{this.z=z;}//Binding  Z in App
     const updateByz=(z)=>{getZ(z)+setZ(z)+1;}//updating Z in App
     const getPlayerPos=(Player,x,y,z)=>{return Player+x+y+z;}//Fetching PllayerPos in Server
+    const setPlayerpos=(Player,x,y,z)=>{this.PlayerPos=PlayerPos;}//Binding PlayerPos in App
     const updateByx=(x)=>{getX(x)+setX(X)+1;}//updating X in App
     const updateByy=(y)=>{getY(y)+setY(y)+1;}//updating Y in App
     const existsByy=(y)=>{if(y>0)getY(y);else getY(0);}//checking y's existence in App
