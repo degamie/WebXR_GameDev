@@ -82,6 +82,9 @@ const updateByMesh=(mesh)=>{if(mesh>0)getMesh(mesh)+setMesh(mesh)+1;else getMesh
     if(mesh.length>0)getBymesh(mesh);
     else getBymesh(0);
     }
+const existsByShape=(shape)=>{
+    if(shape>0)getByShape(shape);
+    else getByShape(0);}//Checking Shape's Existence in App
 const raycastOutput=new BABYLON.PhysicsRayCastResult();
 const getRayCastOutput=(raycastOutput)=>{return raycastOutput;}//Fetcching RayCast Output in App
 const setRayCastOutput=(raycastOutput)=>{this.raycastOutput=raycastOutput;}//Binding RayCast Output In App
