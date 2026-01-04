@@ -57,6 +57,7 @@ const existsByDirectionZ=(directionZ)=>{if(directionZ>0)getDirectionZ(directionZ
 const direction_opp_Z=xrCam.getDirection(-(Axis.Z))+"Camera Direction On Back";
 const Height=xrCam.realWorldHeight;
 const getDirectionopp_Z=(direction_opp_Z)=>{return direction_opp_Z;}//fetching Direction Opp Z in APp
+const setDirectionopp_Z=(direction_opp_Z)=>{this.direction_opp_Z=direction_opp_Z;}//Binding Direction OppZ in APp
 const getHeight=(Height)=>{return Height;}//Fetching height in app
 const setHeight=(Height)=>{this.Height=Height;}//Binding Height in Apps
 const updateAllByHeight=(Height)=>{getHeight(Height)+setHeight(Height)+1;}//Updating height in App
