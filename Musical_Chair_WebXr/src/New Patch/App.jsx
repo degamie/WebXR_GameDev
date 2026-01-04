@@ -3,7 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-///WID(3/1/2026)#1.1
+///WID(4/1/2026)#1.1
 //(WebXR:) ThreeJs(Fibre)
 function setupScene({scene,camera,renderer,player,controller}){
     const player=0;let x=0;let y=0;let z=0;
@@ -82,7 +82,9 @@ function App(){
    const setScale=(scale)=>{this.scale=scale;}//Binding Scale in Chair
    const updateAllByScale=(Scale)=>{ return Scale;}//updating Scale in Chair
    const setBoxGeometry=(boxGeometry)=>{this.boxGeometry=boxGeometry;}//Binding  boxGeometry in Chair
-  
+    const existsByScale=(Scale)=>{
+        if(Scale>0)getScale(Scale);
+        else getScale(0);}//Checking Scale's Existence in App
   const Box = (props) => {
     return (
       <mesh {...props} ref={meshRef} scale={clicked ? 1.5 : 1} onClick={() => setclicked(!clicked)} onPointerOver={(event) => sethovered(true)} onPointerOut={(event) => sethovered(false)}>
