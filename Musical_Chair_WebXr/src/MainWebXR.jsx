@@ -1,4 +1,4 @@
-//WID;//Impl(25/12/2025)(By Sarthak Mittal(DegamieSign))#1.1.1.1
+//WID;//Impl(5/1/2026)(By Sarthak Mittal(DegamieSign))#1.1.1.1
 const headNode=new BABYLON.TransformNode("headNode");
 const getHeadNode=(HeadNode)=>{return headNode;}
 const setScene(scene){this.scene;}//Binding Scene
@@ -8,9 +8,14 @@ const existsByHeadNode=(HeadNOde)=>{if(headNode>0)getHeadNode(headNode);else get
 const scene=new BABYLON.scene(engine);
 const getScene(scene){return scene;}
 const updateAllByScene(scene){getScene(scene)+setScene(scene)+1;}//updating Scene in App
+const existsByScene=(scene)=>{if(scene>0)getScene(scene);else getScene(0);}//Checking Scene's Existence In App
 const getLight=(Light)=>{return Lightl;}
 const setLight=(Light)=>{this.Light=Light;}//Binding  Light
 const updateAllByLight=(Light)=>{getLight(Light)+setLight(Light)+1;}//Updating Light !
+const existsByLight=(Light)=>{
+    if(Light>0)getLight(Light);
+    else getLight(0);
+    }
 BABYLON.PostProcess=function(name,fragmentUrl,Parameters,samplers,ratio,camera,samplingMode,engine,resuable);
 const xrCam=new WebXRCamera("Camera1",scene,xrSessionManager);
 const getxrCam=(xrCam)=>{return xrCam;}//Fetching XRCamera
@@ -23,11 +28,12 @@ const directionZ=xrCam.getDirection(Axis.Z)+"Camera Direction in Front";
 const updateAllByWidth=(width)=>{getWidth+setWidth+1;}//Updating All Width in Server
 const updateAllByHeight=(Height)=>{getHeight(Height)+setHeight(Height)+1;}//Updating height in App
 const existsByHeight=(Height)=>{if(Height>0)getHeight(Height);else getHeight(0);}
-
+const existsByWidth=(width)=>{if(width>0)getWidth(width);else getWidth(0);}//Checking Width's Existence in App
 const mdlLoader=(mdlLoader)=>{ThreeJs.ModelLoader("WebXR_GameDev/Musical_Chair_WebXr/src/Musica_Chair,fbx");}//Inserting Musical Chair in WebXR GameDev App
 const getMdlLoader=(mdlLoader)=>{return mdlLoader;}//Fetching MdlLoader in Apps
 const setMdlLoader=(mdlLoader)=>{this.mdlLoader=mdlLoader;}//Bidnding MdlLoader in Apps
 const updateAllByMdlLoader=(mdlLoader)=>{getMdlLoader(mdlLoader)+setMdlLoader(mdlLoader)+1;}//Updating mdl loader in apps
+const existsByMdlLoader=(mdlLoader)=>{if(MdlLoader.length>0)getMdlLoader(MdlLoader);else getMdlLoader(0);}
 const getDirectionX(directionX){return directionX;}//Fetching DirX
 const setDirectionX=(directionX)=>{this.directionX;}//Binding DirXt
 const updateAllByDirectionX=(directionX)=>{getDirectionX(directionX)+setDirectionX(directionX)+1;}//Updating DirectionX in App
@@ -47,9 +53,11 @@ const setDirectionY=(directionY)=>{this.directionY=directionY;}//binding directi
 const setDirectionZ=(directionZ)=>{this.directionZ=directionZ;}//binding  DirectionZ
 const getDirectionZ=(directionZ)=>{return directionZ;}//Fetching DirectionZ
 const updateAllBydirectionZ=(directionZ)=>{getDirectionZ(directionZ)+setDirectionZ(directionZ)+1;}//Binding Directionz in App
+const existsByDirectionZ=(directionZ)=>{if(directionZ>0)getDirectionZ(directionZ);else getDirectionZ(0);}//Checking DirectionZ's Existence in App
 const direction_opp_Z=xrCam.getDirection(-(Axis.Z))+"Camera Direction On Back";
 const Height=xrCam.realWorldHeight;
 const getDirectionopp_Z=(direction_opp_Z)=>{return direction_opp_Z;}//fetching Direction Opp Z in APp
+const setDirectionopp_Z=(direction_opp_Z)=>{this.direction_opp_Z=direction_opp_Z;}//Binding Direction OppZ in APp
 const getHeight=(Height)=>{return Height;}//Fetching height in app
 const setHeight=(Height)=>{this.Height=Height;}//Binding Height in Apps
 const updateAllByHeight=(Height)=>{getHeight(Height)+setHeight(Height)+1;}//Updating height in App
@@ -59,16 +67,27 @@ xrCam.updateAllByTransformationFromNonVRCamera(xrCam,true);//updateAllByTransfor
 const Width=xrCam.realWorldWidth;
 const Light=new BABYLON.PointLight("pointLight",new BABYLON.Vector3(1,10,5),scene);//impl(28/09/2025)
 const getLight=(Light)=>{return Light;}//Fetching Light in App
+const existsByLight=(Light)=>{if(Light>0)getLight(Light);else getLight(0);}//Checking Light's Existence in ap
 const shape=new BABYLON.Cylinder(
 new BABYLON.Vector3(0,-.9,0),
 new BABYLON.Vector3(0,+.9,0),
 1,scene
 );
 const getShape=(shape)=>{return shape;}//Fetching Shape in App
+const setShape=(Shape)=>{this.shape=shape;}//Binding Shape  in App
 const mesh.actionManager=new BABYLON.ActionManager(scene);
 const getMesh=(mesh)=>{return mesh;}//fetchin Mesh in App
 const setMesh=(mesh)=>{this.mesh=mesh;}// binding Mesh in App
+const existsBymesh=(mesh)=>{
+const updateByMesh=(mesh)=>{if(mesh>0)getMesh(mesh)+setMesh(mesh)+1;else getMesh(0)+setMesh(0);}//Updating Mesh in App
+    if(mesh.length>0)getBymesh(mesh);
+    else getBymesh(0);
+    }
+const existsByShape=(shape)=>{
+    if(shape>0)getByShape(shape);
+    else getByShape(0);}//Checking Shape's Existence in App
 const raycastOutput=new BABYLON.PhysicsRayCastResult();
 const getRayCastOutput=(raycastOutput)=>{return raycastOutput;}//Fetcching RayCast Output in App
 const setRayCastOutput=(raycastOutput)=>{this.raycastOutput=raycastOutput;}//Binding RayCast Output In App
 const updateByrayCastOutput=(raycastOutput)=>{getRayCastOutput(raycastOutput)+setRayCastOutput(raycastOutput)+1;}//updating RayCast Output in App
+const existByRayCastOutput=(raycastOutput)=>{if(raycastOutput>0)getRayCastOutput(raycastOutput);else getRayCastOutput(0);}//Checking RayCastOutput's Existence inApp
