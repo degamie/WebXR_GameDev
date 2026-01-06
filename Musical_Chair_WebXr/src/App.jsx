@@ -3,7 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-///WID(22/12/2025)#1.1
+///WID(5/1/2026)#1.1
 //(WebXR:) ThreeJs(Fibre)
 function setupScene({scene,camera,renderer,player,controller}){
     const player=0;let x=0;let y=0;let z=0;
@@ -11,12 +11,17 @@ function setupScene({scene,camera,renderer,player,controller}){
     const getY=(y)=>{return y;}//Fetching Y in App
     const getZ=(z)=>{return z;}//Fetching Z in App
     const setZ=(z)=>{this.z=z;}//Binding  Z in App
+    const updateByz=(z)=>{getZ(z)+setZ(z)+1;}//updating Z in App
     const getPlayerPos=(Player,x,y,z)=>{return Player+x+y+z;}//Fetching PllayerPos in Server
+    const setPlayerpos=(Player,x,y,z)=>{this.PlayerPos=PlayerPos;}//Binding PlayerPos in App
     const updateByx=(x)=>{getX(x)+setX(X)+1;}//updating X in App
     const updateByy=(y)=>{getY(y)+setY(y)+1;}//updating Y in App
+    const existsByy=(y)=>{if(y>0)getY(y);else getY(0);}//checking y's existence in App
+    const existsByz=(z)=>{if(z>0)getZ(z);else getZ(0);}//Checking Z's Existence in App
     const setPlayerpos=(player,x,y,z)=>{this.Player=Player;this.x=x;this.y=y;this.z=z;} //binding Player Pos in Server
     const updateAllByPlayerPos=(player,x,y,z)=>{getPlayerPos(player,x,y,z)+setPlayerpos(player,x,y,z)+1;}//Updating Player Pos in Server
     const updateAllByPlayerPos=(x,PlayerPos)=>{getPlayerPos(x,PlayerPos)+setPlayerpos(x,PlayerPos)+1;}//Updating Player's Xth Pos in Server
+    const getCamera=(Camera)=>{return camera;}//Fetching Camera in App
     const existsAllbyPlayerPos=(player,x,y,z)=>{
          while(player.length!=null){
              if(x===y && y===z &z===x){
@@ -29,6 +34,8 @@ function setupScene({scene,camera,renderer,player,controller}){
     const getListener=(listener)=>{return listener;}
     const updateListener=(listener)=>{getListener(listener)+setlistener(listener);}
     const existsListener=(listener)=>{if(listener>0)getListener(listener);else getListener("0");}//Checking Listener's Existence in App
+    const getBysfx=(sfx)=>{return sfx;}//Fetching sfx in App
+    const setBySfx=(sfx)=>{this.sfx=sfx;}//Binding Sfx in App
     camera.add(listener);
     camera.update(listener);
     listener.add(ScoreSnd);
@@ -43,13 +50,16 @@ function setupScene({scene,camera,renderer,player,controller}){
     const getScoreSnd=(ScoreSnd)=>{return scoreSnd;}
     const setScoreSnd=(ScoreSnd)=>{this.scoreSnd=scoreSnd;}//Binding ScoreSound
     const updateAllByScoreSnd=(ScoreSnd)=>{getScoreSnd(ScoreBoardSound)+setScoreSnd(ScoreBoardSound)+1};//Updating ScoreSnd in Server
+    const existsByScoreSnd=(ScoreSnd)=>{if(ScoreSnd>0)getScoreSnd(ScoreSnd);else getScoreSnd(0);}
 }
+const existsBySfx=(sfx)=>{if(sfx>0)getBysfx(sfx);else getBysfx(0);}//checking sfx's existence in App
 function Cylinder(props){
   meshRef=useRef();
 
   const setMeshRef=(meshRef)=>{this.meshRef=meshRef;}//Binding MeshRef
   const getMeshRef=(meshRef)=>{return meshRef;}//Fetching MeshRef
   const updateAllMeshRef=(meshRef)=>{getMeshRef(meshRef)+setMeshRef(meshRef)+1;}//Updating MeshRef in WebXR's Server
+  const existsByMeshRef=(meshRef)=>{if(meshRef.length!=null)getMeshRef(meshRef);else getMeshRef(0);}//Checking MeshRef's Existence in App
   const [hovered,sethovered]=useState(false);
   const [clicked,setclicked]=useState(false);
   useFrame(()=>(meshRef.current.rotation.x=meshRef.current.rotation.y+=.01));//Implementaing Cylinder's Rotation at Y-axis
@@ -65,6 +75,7 @@ function App(){
     const getMdlLoader=(mdlLoader)=>{return mdlLoader;}
     const setMdlLoader=(mdlLoader)=>{this.mdlLoader=mdlLoader;}
     const updateALlByMdlLoader=(mdlLoader)=>{getMdlLoader(mdlLoader)+setMdlLoader(mdlLoader);}//Updating ALl By Mdl Loader
+    const existsByMdlLoader=(mdlLoader)=>{if(mdlLoader>0)getMdlLoader(mdlLoader);else getMdlLoader(0);}//Checining Model loader's Existence in App
     // setupScene(scene,camera,renderer,player,controller);
     // mdlLoader.add(scoreSnd);
 
@@ -73,7 +84,9 @@ function App(){
    const setScale=(scale)=>{this.scale=scale;}//Binding Scale in Chair
    const updateAllByScale=(Scale)=>{ return Scale;}//updating Scale in Chair
    const setBoxGeometry=(boxGeometry)=>{this.boxGeometry=boxGeometry;}//Binding  boxGeometry in Chair
-  
+    const existsByScale=(Scale)=>{
+        if(Scale>0)getScale(Scale);
+        else getScale(0);}//Checking Scale's Existence in App
   const Box = (props) => {
     return (
       <mesh {...props} ref={meshRef} scale={clicked ? 1.5 : 1} onClick={() => setclicked(!clicked)} onPointerOver={(event) => sethovered(true)} onPointerOut={(event) => sethovered(false)}>
