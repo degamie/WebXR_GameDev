@@ -1,4 +1,4 @@
-//WID;//Impl(5/1/2026)(By Sarthak Mittal(DegamieSign))#1.1.1.1
+//WID;//Impl(6/1/2026)(By Sarthak Mittal(DegamieSign))#1.1.1.1
 const headNode=new BABYLON.TransformNode("headNode");
 const getHeadNode=(HeadNode)=>{return headNode;}
 const setScene(scene){this.scene;}//Binding Scene
@@ -6,6 +6,7 @@ const setHeadNode=(HeadNOde)=>{this.headNode=headNode;}//bindinng HeadNode in ap
 const updateHeadNode=(HeadNOde)=>{getHeadNode(HeadNOde)+setHeadNodeh(HeadNOde)+1;}//Updating HeadNOde in App
 const existsByHeadNode=(HeadNOde)=>{if(headNode>0)getHeadNode(headNode);else getHeadNode(0);}//Checking HeadNOde's Existence in App
 const scene=new BABYLON.scene(engine);
+const setScene=(scene)=>{this.scene=scene;}//Binding Scene in App
 const getScene(scene){return scene;}
 const updateAllByScene(scene){getScene(scene)+setScene(scene)+1;}//updating Scene in App
 const existsByScene=(scene)=>{if(scene>0)getScene(scene);else getScene(0);}//Checking Scene's Existence In App
