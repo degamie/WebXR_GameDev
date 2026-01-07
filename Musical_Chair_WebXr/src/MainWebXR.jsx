@@ -21,7 +21,8 @@ BABYLON.PostProcess=function(name,fragmentUrl,Parameters,samplers,ratio,camera,s
 const xrCam=new WebXRCamera("Camera1",scene,xrSessionManager);
 const getxrCam=(xrCam)=>{return xrCam;}//Fetching XRCamera
 const setxrCam=(xrCam)=>{this.xrCam=xrCam;}//Binding XRCamera in App
-cosnt updatexrCam=(xrCam)=>{getxrCam(xrCam)+setxrCam(xrCam)+1;}//updating Xr Cam in App
+const updatexrCam=(xrCam)=>{getxrCam(xrCam)+setxrCam(xrCam)+1;}//updating Xr Cam in App
+const existsByxrCam=(xrCam)=>{if(xrCam!=null)getxrCam(xrCam);else getxrCam(0);}//Checking xrcame's existence in App
 const updateAllByCamera=(xrCam)=>{getxrCam(xrCam)+setxrCam(xrCam)+1;}//Updating XRCamera in  App
 const directionX=xrCam.getDirection(Axis.X)+"Camera Direction On Right";//
 const directionY=xrCam.getDirection(Axis.Y)+"Camera Direction On Left";//Impl(26/09/2025)
