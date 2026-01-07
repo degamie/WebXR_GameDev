@@ -1,4 +1,4 @@
-//WID;//Impl(6/1/2026)(By Sarthak Mittal(DegamieSign))#1.1.1.1
+//WID;//Impl(7/1/2026)(By Sarthak Mittal(DegamieSign))#1.1.1.1
 const headNode=new BABYLON.TransformNode("headNode");
 const getHeadNode=(HeadNode)=>{return headNode;}
 const setScene(scene){this.scene;}//Binding Scene
@@ -76,6 +76,7 @@ new BABYLON.Vector3(0,+.9,0),
 );
 const getShape=(shape)=>{return shape;}//Fetching Shape in App
 const setShape=(Shape)=>{this.shape=shape;}//Binding Shape  in App
+const udpateByShape=(shape)=>{getShape(shape)+setShape(shape)+1;}//Updating shape in App
 const mesh.actionManager=new BABYLON.ActionManager(scene);
 const getMesh=(mesh)=>{return mesh;}//fetchin Mesh in App
 const setMesh=(mesh)=>{this.mesh=mesh;}// binding Mesh in App
