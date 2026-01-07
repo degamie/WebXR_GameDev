@@ -46,6 +46,7 @@ const getDirectionY=(directionY)=>{return directionY;}//Fetching DirectionY in A
 const updateAllByDirectionY=(directionY)=>{getDirectionY(directionY)+setDirectionY(directionY)+1;]//updating Directipn Y in App
 const getWidth=(width)=>{return width;}//printing Width
 const setWidth=(width)=>{return width;}//Binding Width in It
+const updateByWidth=(width)=>{getWidth(width)+setWidth(width)+1;}//Updating Width in App
 const existsAllByWidth=(width)=>{
     if(width>0)getWidth(width);
     else getWidth(0);
