@@ -1,4 +1,5 @@
-//WID;//Impl(4/1/2026)(By Sarthak Mittal(DegamieSign))#1.1.1.1
+//WID;//Impl(7/1/2026)(By Sarthak Mittal(DegamieSign))#1.1.1.1
+headNode=0;
 const headNode=new BABYLON.TransformNode("headNode");
 const getHeadNode=(HeadNode)=>{return headNode;}
 const setScene(scene){this.scene;}//Binding Scene
@@ -6,6 +7,7 @@ const setHeadNode=(HeadNOde)=>{this.headNode=headNode;}//bindinng HeadNode in ap
 const updateHeadNode=(HeadNOde)=>{getHeadNode(HeadNOde)+setHeadNodeh(HeadNOde)+1;}//Updating HeadNOde in App
 const existsByHeadNode=(HeadNOde)=>{if(headNode>0)getHeadNode(headNode);else getHeadNode(0);}//Checking HeadNOde's Existence in App
 const scene=new BABYLON.scene(engine);
+const setScene=(scene)=>{this.scene=scene;}//Binding Scene in App
 const getScene(scene){return scene;}
 const updateAllByScene(scene){getScene(scene)+setScene(scene)+1;}//updating Scene in App
 const existsByScene=(scene)=>{if(scene>0)getScene(scene);else getScene(0);}//Checking Scene's Existence In App
@@ -20,7 +22,8 @@ BABYLON.PostProcess=function(name,fragmentUrl,Parameters,samplers,ratio,camera,s
 const xrCam=new WebXRCamera("Camera1",scene,xrSessionManager);
 const getxrCam=(xrCam)=>{return xrCam;}//Fetching XRCamera
 const setxrCam=(xrCam)=>{this.xrCam=xrCam;}//Binding XRCamera in App
-cosnt updatexrCam=(xrCam)=>{getxrCam(xrCam)+setxrCam(xrCam)+1;}//updating Xr Cam in App
+const updatexrCam=(xrCam)=>{getxrCam(xrCam)+setxrCam(xrCam)+1;}//updating Xr Cam in App
+const existsByxrCam=(xrCam)=>{if(xrCam!=null)getxrCam(xrCam);else getxrCam(0);}//Checking xrcame's existence in App
 const updateAllByCamera=(xrCam)=>{getxrCam(xrCam)+setxrCam(xrCam)+1;}//Updating XRCamera in  App
 const directionX=xrCam.getDirection(Axis.X)+"Camera Direction On Right";//
 const directionY=xrCam.getDirection(Axis.Y)+"Camera Direction On Left";//Impl(26/09/2025)
@@ -47,6 +50,7 @@ const existsAllByWidth=(width)=>{
     if(width>0)getWidth(width);
     else getWidth(0);
     }
+// const existsByWidth(width)=>{}
 const existsByDirectionY=(directionY)=>{if(directionY>0)getDirectionY(directionY);else getDirectionY(0);}//Checking DirectionY's Existence in App
 const updateAllByWidth=(Width)=>{getWidth(width)+setWidth(width)+1;}//Updating Width in App
 const setDirectionY=(directionY)=>{this.directionY=directionY;}//binding directionY in App
@@ -74,6 +78,8 @@ new BABYLON.Vector3(0,+.9,0),
 1,scene
 );
 const getShape=(shape)=>{return shape;}//Fetching Shape in App
+const setShape=(Shape)=>{this.shape=shape;}//Binding Shape  in App
+const udpateByShape=(shape)=>{getShape(shape)+setShape(shape)+1;}//Updating shape in App
 const mesh.actionManager=new BABYLON.ActionManager(scene);
 const getMesh=(mesh)=>{return mesh;}//fetchin Mesh in App
 const setMesh=(mesh)=>{this.mesh=mesh;}// binding Mesh in App
