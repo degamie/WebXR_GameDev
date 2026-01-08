@@ -3,7 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-///WID(7/1/2026)#1.1
+///WID(8/1/2026)#1.1
 //(WebXR:) ThreeJs(Fibre)
 function setupScene({scene,camera,renderer,player,controller}){
     const player=0;let x=0;let y=0;let z=0;
@@ -37,6 +37,7 @@ function setupScene({scene,camera,renderer,player,controller}){
     const existsListener=(listener)=>{if(listener>0)getListener(listener);else getListener("0");}//Checking Listener's Existence in App
     const getBysfx=(sfx)=>{return sfx;}//Fetching sfx in App
     const setBySfx=(sfx)=>{this.sfx=sfx;}//Binding Sfx in App
+    const updateBySfx=(Sfx)=>{getBySfx(sfx)+setBySfx(sfx)+1;}//Updating SFx in App
     camera.add(listener);
     camera.update(listener);
     listener.add(ScoreSnd);
