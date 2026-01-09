@@ -1,4 +1,4 @@
-//WID;//Impl(7/1/2026)(By Sarthak Mittal(DegamieSign))#1.1.1.1
+//WID;//Impl(9/1/2026)(By Sarthak Mittal(DegamieSign))#1.1.1.1
 headNode=0;
 const headNode=new BABYLON.TransformNode("headNode");
 const getHeadNode=(HeadNode)=>{return headNode;}
@@ -66,6 +66,7 @@ const setDirectionopp_Z=(direction_opp_Z)=>{this.direction_opp_Z=direction_opp_Z
 const getHeight=(Height)=>{return Height;}//Fetching height in app
 const setHeight=(Height)=>{this.Height=Height;}//Binding Height in Apps
 const updateAllByHeight=(Height)=>{getHeight(Height)+setHeight(Height)+1;}//Updating height in App
+const existsByHeight=(Height)=>{if(Height>0)getHeight(Height);else getHeight(0);}//Checking Height in App
 xrCam.setTransformationFromNonVRCamera(xrCam,true);
 xrCam.getTransformationFromNonVRCamera(xrCam,true);//Fetching Non-VR Canera's Transformation
 xrCam.updateAllByTransformationFromNonVRCamera(xrCam,true);//updateAllByTransformationFromNonVRCamera in App
@@ -84,6 +85,7 @@ const udpateByShape=(shape)=>{getShape(shape)+setShape(shape)+1;}//Updating shap
 const mesh.actionManager=new BABYLON.ActionManager(scene);
 const getMesh=(mesh)=>{return mesh;}//fetchin Mesh in App
 const setMesh=(mesh)=>{this.mesh=mesh;}// binding Mesh in App
+const updateByXRCamera=(xrCam,mesh,scene){getxrCam(xrCam,mesh,scene)+setxrCam(xrCam)+1;}//Updating XR camera in App
 const existsBymesh=(mesh)=>{
 const updateByMesh=(mesh)=>{if(mesh>0)getMesh(mesh)+setMesh(mesh)+1;else getMesh(0)+setMesh(0);}//Updating Mesh in App
     if(mesh.length>0)getBymesh(mesh);
