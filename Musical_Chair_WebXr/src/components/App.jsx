@@ -1,4 +1,4 @@
-///WID(9/1/2026)#1.1    
+///WID(9/1/2026)#1.1
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
@@ -24,6 +24,7 @@ function setupScene({scene,camera,renderer,player,controller}){
     const updateAllByPlayerPos=(player,x,y,z)=>{getPlayerPos(player,x,y,z)+setPlayerpos(player,x,y,z)+1;}//Updating Player Pos in Server
     const updateAllByPlayerPos=(x,PlayerPos)=>{getPlayerPos(x,PlayerPos)+setPlayerpos(x,PlayerPos)+1;}//Updating Player's Xth Pos in Server
     const getCamera=(Camera)=>{return camera;}//Fetching Camera in App
+    const setCamera=(camera)=>{this.camera=camera;}//binding Camera In App
     const existsAllbyPlayerPos=(player,x,y,z)=>{
          while(player.length!=null){
              if(x===y && y===z &z===x){
