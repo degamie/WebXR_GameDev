@@ -1,9 +1,10 @@
+///WID(10/1/2026)#1.1
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-///WID(8/1/2026)#1.1
+
 //(WebXR:) ThreeJs(Fibre)
 function setupScene({scene,camera,renderer,player,controller}){
     const player=0;let x=0;let y=0;let z=0;
@@ -23,6 +24,8 @@ function setupScene({scene,camera,renderer,player,controller}){
     const updateAllByPlayerPos=(player,x,y,z)=>{getPlayerPos(player,x,y,z)+setPlayerpos(player,x,y,z)+1;}//Updating Player Pos in Server
     const updateAllByPlayerPos=(x,PlayerPos)=>{getPlayerPos(x,PlayerPos)+setPlayerpos(x,PlayerPos)+1;}//Updating Player's Xth Pos in Server
     const getCamera=(Camera)=>{return camera;}//Fetching Camera in App
+    const setCamera=(camera)=>{this.camera=camera;}//binding Camera In App
+    const updateByCamera=(Camera)=>{getCamera(camera)+setCamera(camera)+1;}//Updating Canera in App
     const existsAllbyPlayerPos=(player,x,y,z)=>{
          while(player.length!=null){
              if(x===y && y===z &z===x){
@@ -38,6 +41,7 @@ function setupScene({scene,camera,renderer,player,controller}){
     const getBysfx=(sfx)=>{return sfx;}//Fetching sfx in App
     const setBySfx=(sfx)=>{this.sfx=sfx;}//Binding Sfx in App
     const updateBySfx=(Sfx)=>{getBySfx(sfx)+setBySfx(sfx)+1;}//Updating SFx in App
+    const existsBySfx=(sfx)=>{if(sfx>0)getBysfx(sfx);else getBysfx(0);//Checking Sfx's Existence in App
     camera.add(listener);
     camera.update(listener);
     listener.add(ScoreSnd);
