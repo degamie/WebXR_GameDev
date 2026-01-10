@@ -73,6 +73,7 @@ xrCam.updateAllByTransformationFromNonVRCamera(xrCam,true);//updateAllByTransfor
 const Width=xrCam.realWorldWidth;
 const Light=new BABYLON.PointLight("pointLight",new BABYLON.Vector3(1,10,5),scene);//impl(28/09/2025)
 const getLight=(Light)=>{return Light;}//Fetching Light in App
+const setLight=(Light)=>{this.Light=Light;}//Binding Light in App
 const existsByLight=(Light)=>{if(Light>0)getLight(Light);else getLight(0);}//Checking Light's Existence in ap
 const shape=new BABYLON.Cylinder(
 new BABYLON.Vector3(0,-.9,0),
