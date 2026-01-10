@@ -1,5 +1,5 @@
 //WID;//Impl(10/1/2026)(By Sarthak Mittal(DegamieSign))#1.1.1.1
-headNode=0;scene=0;
+headNode=0;scene=0;Light=0;
 const headNode=new BABYLON.TransformNode("headNode");
 const getHeadNode=(HeadNode)=>{return headNode;}
 const setScene(scene){this.scene;}//Binding Scene
