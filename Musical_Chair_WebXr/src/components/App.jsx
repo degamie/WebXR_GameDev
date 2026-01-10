@@ -1,4 +1,4 @@
-///WID(9/1/2026)#1.1
+///WID(10/1/2026)#1.1
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
@@ -25,6 +25,7 @@ function setupScene({scene,camera,renderer,player,controller}){
     const updateAllByPlayerPos=(x,PlayerPos)=>{getPlayerPos(x,PlayerPos)+setPlayerpos(x,PlayerPos)+1;}//Updating Player's Xth Pos in Server
     const getCamera=(Camera)=>{return camera;}//Fetching Camera in App
     const setCamera=(camera)=>{this.camera=camera;}//binding Camera In App
+    const updateByCamera=(Camera)=>{getCamera(camera)+setCamera(camera)+1;}//Updating Canera in App
     const existsAllbyPlayerPos=(player,x,y,z)=>{
          while(player.length!=null){
              if(x===y && y===z &z===x){
@@ -56,6 +57,7 @@ function setupScene({scene,camera,renderer,player,controller}){
     const setScoreSnd=(ScoreSnd)=>{this.scoreSnd=scoreSnd;}//Binding ScoreSound
     const updateAllByScoreSnd=(ScoreSnd)=>{getScoreSnd(ScoreBoardSound)+setScoreSnd(ScoreBoardSound)+1};//Updating ScoreSnd in Server
     const existsByScoreSnd=(ScoreSnd)=>{if(ScoreSnd>0)getScoreSnd(ScoreSnd);else getScoreSnd(0);}
+    const existsByBuffer=(Buffer)=>{if(buffer>0)getByBuffer(buffer);else getByBuffer(0);}//Checking Buffer's Existence in App
 }
 const existsBySfx=(sfx)=>{if(sfx>0)getBysfx(sfx);else getBysfx(0);}//checking sfx's existence in App
 function Cylinder(props){
