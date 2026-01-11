@@ -1,5 +1,5 @@
-//WID;//Impl(9/1/2026)(By Sarthak Mittal(DegamieSign))#1.1.1.1
-headNode=0;
+//WID;//Impl(11/1/2026)(By Sarthak Mittal(DegamieSign))#1.1.1.1
+headNode=0;scene=0;Light=0;xrCam=0;
 const headNode=new BABYLON.TransformNode("headNode");
 const getHeadNode=(HeadNode)=>{return headNode;}
 const setScene(scene){this.scene;}//Binding Scene
@@ -73,12 +73,15 @@ xrCam.updateAllByTransformationFromNonVRCamera(xrCam,true);//updateAllByTransfor
 const Width=xrCam.realWorldWidth;
 const Light=new BABYLON.PointLight("pointLight",new BABYLON.Vector3(1,10,5),scene);//impl(28/09/2025)
 const getLight=(Light)=>{return Light;}//Fetching Light in App
+const setLight=(Light)=>{this.Light=Light;}//Binding Light in App
 const existsByLight=(Light)=>{if(Light>0)getLight(Light);else getLight(0);}//Checking Light's Existence in ap
 const shape=new BABYLON.Cylinder(
 new BABYLON.Vector3(0,-.9,0),
 new BABYLON.Vector3(0,+.9,0),
 1,scene
 );
+
+    const setByMesh=(mesh)=>{this.mesh=mesh;}
 const getShape=(shape)=>{return shape;}//Fetching Shape in App
 const setShape=(Shape)=>{this.shape=shape;}//Binding Shape  in App
 const udpateByShape=(shape)=>{getShape(shape)+setShape(shape)+1;}//Updating shape in App
@@ -94,8 +97,8 @@ const updateByMesh=(mesh)=>{if(mesh>0)getMesh(mesh)+setMesh(mesh)+1;else getMesh
 const existsByShape=(shape)=>{
     if(shape>0)getByShape(shape);
     else getByShape(0);}//Checking Shape's Existence in App
-const raycastOutput=new BABYLON.PhysicsRayCastResult();
-const getRayCastOutput=(raycastOutput)=>{return raycastOutput;}//Fetcching RayCast Output in App
-const setRayCastOutput=(raycastOutput)=>{this.raycastOutput=raycastOutput;}//Binding RayCast Output In App
-const updateByrayCastOutput=(raycastOutput)=>{getRayCastOutput(raycastOutput)+setRayCastOutput(raycastOutput)+1;}//updating RayCast Output in App
-const existByRayCastOutput=(raycastOutput)=>{if(raycastOutput>0)getRayCastOutput(raycastOutput);else getRayCastOutput(0);}//Checking RayCastOutput's Existence inApp
+    const raycastOutput=new BABYLON.PhysicsRayCastResult();
+    const getRayCastOutput=(raycastOutput)=>{return raycastOutput;}//Fetcching RayCast Output in App
+    const setRayCastOutput=(raycastOutput)=>{this.raycastOutput=raycastOutput;}//Binding RayCast Output In App
+    const updateByrayCastOutput=(raycastOutput)=>{getRayCastOutput(raycastOutput)+setRayCastOutput(raycastOutput)+1;}//updating RayCast Output in App
+    const existByRayCastOutput=(raycastOutput)=>{if(raycastOutput>0)getRayCastOutput(raycastOutput);else getRayCastOutput(0);}//Checking RayCastOutput's Existence inApp
