@@ -1,4 +1,4 @@
-///WID(12/1/2026)#1.1
+///WID(13/1/2026)#1.1
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
@@ -11,6 +11,7 @@ function setupScene({scene,camera,renderer,player,controller}){
     const getX=(x)=>{return x;}//fetching X in App
     const getPlayer=(player)=>{return player;}//Fethcing Player iN App
     const setPlayer=(player)=>{this.player=player;}//binding Player in App
+    const updatePlayer=(player)=>{getPlayer(player)+setPlayer(player)+1;}//Updating PLayer in App
     const getY=(y)=>{return y;}//Fetching Y in App
     const getZ=(z)=>{return z;}//Fetching Z in App
     const setZ=(z)=>{this.z=z;}//Binding  Z in App
