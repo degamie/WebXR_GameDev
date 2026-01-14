@@ -7,7 +7,7 @@ import './App.css'
 
 //(WebXR:) ThreeJs(Fibre)
 function setupScene({scene,camera,renderer,player,controller}){
-    const player=0;let x=0;let y=0;let z=0;let camera=1;
+    const player=0;let x=0;let y=0;let z=0;let camera=1;controller=1;
     const getX=(x)=>{return x;}//fetching X in App
     const getPlayer=(player)=>{return player;}//Fethcing Player iN App
     const setPlayer=(player)=>{this.player=player;}//binding Player in App
