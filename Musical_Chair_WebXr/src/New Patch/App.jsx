@@ -1,13 +1,10 @@
-///WID(14/1/2026)#Degamiesign(Sarthak Mittal)1.1
+///WID(15/1/2026)#Degamiesign(Sarthak Mittal)1.1
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-
-
-//(WebXR:) ThreeJs(Fibre)
 function setupScene({scene,camera,renderer,player,controller}){
-    const player=0;let x=0;let y=0;let z=0;let camera=1;controller=1;
+    const player=0;let x=0;let y=0;let z=0;let camera=1;controller=1;renderer=0;
     const getX=(x)=>{return x;}//fetching X in App
     const getPlayer=(player)=>{return player;}//Fethcing Player iN App
     const setPlayer=(player)=>{this.player=player;}//binding Player in App
