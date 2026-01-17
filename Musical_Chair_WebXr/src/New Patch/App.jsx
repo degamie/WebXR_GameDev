@@ -7,6 +7,9 @@ function setupScene({scene,camera,renderer,player,controller}){
     const player=0;let x=0;let y=0;let z=0;let camera=1;controller=1;renderer=0;
     const getX=(x)=>{return x;}//fetching X in App
     const setX=(x)=>{this.x=x;}//Binding X in App
+    const updatex=(X)=>{
+        if(x>0)getX(x);
+        else getX(0);}//Checking X's Existence
     const updatex=(x)=>{getX(x)+setX(X)+1;}//Updating X in Server
     const getPlayer=(player)=>{return player;}//Fethcing Player iN App
     const setPlayer=(player)=>{this.player=player;}//binding Player in App
