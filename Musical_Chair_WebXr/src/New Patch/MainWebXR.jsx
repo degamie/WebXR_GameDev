@@ -1,7 +1,8 @@
-//WID;//Impl(12/1/2026)(By Sarthak Mittal(DegamieSign))#1.1.1.1
-headNode=0;scene=0;Light=0;xrCam=0;camera=0;
+//WID;//Impl(17/1/2026)(By Sarthak Mittal(DegamieSign))#1.1.1.1
+headNode=0;scene=0;Light=0;xrCam=0;camera=0;model=0;
 const getModel=(model)=>{return model;}//Fetching Model in App
 const setModel=(model)=>{this.model=model;}//Binding Model in App
+const updateModel=(model)=>{getModel(model)+setModel(model)+1;}//Updating Model in App
 const headNode=new BABYLON.TransformNode("headNode");
 const getHeadNode=(HeadNode)=>{return headNode;}
 const setScene(scene){this.scene;}//Binding Scene
