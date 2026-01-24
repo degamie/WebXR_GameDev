@@ -2,7 +2,8 @@
 MainWebXR(headNode){
     this.headNode=headNode;
     this.model=model;
-    this.xrCam=xrCam;}
+    this.xrCam=xrCam;
+    this.shape=shape;}
 headNode=0;scene=0;Light=0;xrCam=1;camera=0;model=0;mesh=0;dirX=0;dirZ=0;shape=1;raycastOutput=1;Height=1;width=1;shape=1;dirX=0;
 const getModel=(model)=>{return model;}//Fetching Model in App
 const setModel=(model)=>{this.model=model;}//Binding Model in App
