@@ -1,5 +1,6 @@
-//WID;//Impl(24/1/2026)(By Sarthak Mittal(DegamieSign))#1.1.1.1.1.1
+//WID;//Impl(25/1/2026)(By Sarthak Mittal(DegamieSign))#1.1.1.1.1.1.1
 MainWebXR(headNode){
+    this.raycastOutput=raycastOutput;
     this.headNode=headNode;
     this.model=model;
     this.xrCam=xrCam;
