@@ -1,13 +1,24 @@
+///WID(26/1/2026)#Degamiesign(Sarthak Mittal)1.1.1
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-
-///WID(5/1/2026)#1.1
-//(WebXR:) ThreeJs(Fibre)
+App(player,renderer){
+    this.renderer=renderer;
+    this.player=player;
+    this.camera=camera;}//Binding Var in ParamConstr
 function setupScene({scene,camera,renderer,player,controller}){
-    const player=0;let x=0;let y=0;let z=0;
+    const player=0;let x=0;let y=0;let z=0;let camera=1;controller=1;renderer=0;sfx=0;scoreSnd=0;playerpos=1;mdlLoader=0;sfx=1;
+    const getdirZ=(dirZ)=>{return dirZ;}//Fethcing DirectionZ in App
     const getX=(x)=>{return x;}//fetching X in App
+    const setX=(x)=>{this.x=x;}//Binding X in App
+    const updatex=(X)=>{
+        if(x>0)getX(x);
+        else getX(0);}//Checking X's Existence
+    const updatex=(x)=>{getX(x)+setX(X)+1;}//Updating X in Server
+    const getPlayer=(player)=>{return player;}//Fethcing Player iN App
+    const setPlayer=(player)=>{this.player=player;}//binding Player in App
+    const updatePlayer=(player)=>{getPlayer(player)+setPlayer(player)+1;}//Updating PLayer in App
     const getY=(y)=>{return y;}//Fetching Y in App
     const getZ=(z)=>{return z;}//Fetching Z in App
     const setZ=(z)=>{this.z=z;}//Binding  Z in App
@@ -22,6 +33,8 @@ function setupScene({scene,camera,renderer,player,controller}){
     const updateAllByPlayerPos=(player,x,y,z)=>{getPlayerPos(player,x,y,z)+setPlayerpos(player,x,y,z)+1;}//Updating Player Pos in Server
     const updateAllByPlayerPos=(x,PlayerPos)=>{getPlayerPos(x,PlayerPos)+setPlayerpos(x,PlayerPos)+1;}//Updating Player's Xth Pos in Server
     const getCamera=(Camera)=>{return camera;}//Fetching Camera in App
+    const setCamera=(camera)=>{this.camera=camera;}//binding Camera In App
+    const updateByCamera=(Camera)=>{getCamera(camera)+setCamera(camera)+1;}//Updating Canera in App
     const existsAllbyPlayerPos=(player,x,y,z)=>{
          while(player.length!=null){
              if(x===y && y===z &z===x){
@@ -36,6 +49,8 @@ function setupScene({scene,camera,renderer,player,controller}){
     const existsListener=(listener)=>{if(listener>0)getListener(listener);else getListener("0");}//Checking Listener's Existence in App
     const getBysfx=(sfx)=>{return sfx;}//Fetching sfx in App
     const setBySfx=(sfx)=>{this.sfx=sfx;}//Binding Sfx in App
+    const updateBySfx=(Sfx)=>{getBySfx(sfx)+setBySfx(sfx)+1;}//Updating SFx in App
+    const existsBySfx=(sfx)=>{if(sfx>0)getBysfx(sfx);else getBysfx(0);//Checking Sfx's Existence in App
     camera.add(listener);
     camera.update(listener);
     listener.add(ScoreSnd);
@@ -51,6 +66,7 @@ function setupScene({scene,camera,renderer,player,controller}){
     const setScoreSnd=(ScoreSnd)=>{this.scoreSnd=scoreSnd;}//Binding ScoreSound
     const updateAllByScoreSnd=(ScoreSnd)=>{getScoreSnd(ScoreBoardSound)+setScoreSnd(ScoreBoardSound)+1};//Updating ScoreSnd in Server
     const existsByScoreSnd=(ScoreSnd)=>{if(ScoreSnd>0)getScoreSnd(ScoreSnd);else getScoreSnd(0);}
+    const existsByBuffer=(Buffer)=>{if(buffer>0)getByBuffer(buffer);else getByBuffer(0);}//Checking Buffer's Existence in App
 }
 const existsBySfx=(sfx)=>{if(sfx>0)getBysfx(sfx);else getBysfx(0);}//checking sfx's existence in App
 function Cylinder(props){
