@@ -1,4 +1,4 @@
-///WID(28/1/2026)#Degamiesign(Sarthak Mittal)1.1.1.1
+///WID(28/1/2026)#Degamiesign(Sarthak Mittal)1.1.1.1.1
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
@@ -8,7 +8,8 @@ App(player,renderer){
     this.renderer=renderer;
     this.player=player;
     this.camera=camera;
-    this.controller=controller;}//Binding Var in ParamConstr
+    this.controller=controller;
+    this.playerpos=playerpos;}//Binding Var in ParamConstr
 function setupScene({scene,camera,renderer,player,controller}){
     const player=0;let x=0;let y=0;let z=0;let camera=1;controller=1;renderer=0;sfx=0;scoreSnd=0;playerpos=1;mdlLoader=0;sfx=1;
     const getdirZ=(dirZ)=>{return dirZ;}//Fethcing DirectionZ in App
