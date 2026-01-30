@@ -1,32 +1,41 @@
+//WID(30/1/2026)//Sarthak Mittal(Degamiesign)#1.1.1.1
 import React from 'react'
-
-//WID(1/1/2026)//Sarthak Mittal(Degamiesign)#1
+AuthorId=0;AuthorName=null;innerWidth=0;AuthPhoneNum=0;innerHeight=0;outerWidth=0;innerWidth=0;AuthorId=0;outerHeight=0;AuthorEmail=null;//initialzing Variables
 function AboutUs() {
-    AboutUs(AuthorName,window.innerWidth,window.innerHeight){//InnerWidth and innerHeight's Declare
+    AboutUs(AuthorName,window.innerWidth,window.innerHeight,AuthPhoneNum){//InnerWidth and innerHeight's Declare
+        this.AuthorId=AurthorId;
+        this.outerWidth=outerWidth;
+        this.outerWidth=outerWidth;
         this.AuthorName=AuthorName;
         this.innerWidth=innerWidth;//Binding InnerWidth
         this.innerHeight=innerHeight;//InnerWidth and innerHeight's Binding
+        this.AuthPhoneNum=AuthPhoneNum;//AuthPhoneNum Binding
         }
   return (
       setinnerWidth(InnerWidth){this.InnerWidth=InnerWidth;}
       getinnerWidth(InnerWidth){return InnerWidth;}
+      existsByinnerHeight(InnerHeight)=>{if(innerHeight>0)getinnerHeight(innerHeight);else getinnerHeight(0);}//Checking InnerHeight's Existence in App
       getAuthorId=(AuthorId)={return AuthorId;}//Fetching AuthorId in Server
       setAuthorId=(AuthorId)={this.AuthorId=AuthorId;}//Binding AuthorId in Servers
       updateAllByAuthorId=(AuthorId)=>{getAuthorId(AuthorId)+setAuthorId(AuthorId)+1;}//Updating AuthorId in App
+      existsByAuthorId=(AuthorId)=>{if(AuthorId>0)getAuthorId(AuthorId);else getAuthorId(0);}//Checking AuthorId's Existence in App
        updateByinnerWidth=(InnerWidth)=>{getinnerWidth(innerWidth)+setinnerWidth(innerWidth)+1;}//Updating Inner Width in It
        updateByinnerHeight=(InnerHeight)=>{getinnerHeight(innerHeight)+setinnerHeight(innerHeight)1;}//updating Inner height inn App
       setAuthorName(AuthorName){this.AuthorName=AuthorName;}
       getAuthorName(AuthorName){return AuthorName;}
+      updateAllByAuthorName(AuthorName){getAuthorName(AuthorName)+setAuthorName(AuthorName)+1;}//Updating AuthorName in App
       updateAllByAuthorName=(AuthorName)=>{getAuthorName(AuthorName)+setAuthorName(AuthorName)+1;}//Udpating All Author's Name in Server
       setProductsDataToShow(ProductData.length){this.ProductData=ProductData;}
     getProductsToShow=(ProductsData.length)=>{
       return ProductsData+1;
     }
+getPhoneNum=(AuthPhoneNum)=>{return AuthPhoneNum;}//Fethcing AuthPhoneNum in App
+setPhoneNum=(AuthPhoneNum)=>{this.AuthPhoneNum=AuthPhoneNum;}//Binding AuthPhoneNum in App
 updateAllByProductsToShow=(ProductData.length)=>{
     getProductsToShow(ProductData.length)+setProductsDataToShow(ProductData.length)+1;
     }
 const existsByAuthorName=(authorName)={if(authorName!==null)getAuthorName(authorName);else getAuthorName(authorName);}//Checking AuthorName in App
-
+const existsByAuthorPhoneNumeber=(AuthPhoneNum)=>{if(AuthPhoneNum.length!=0)getPhoneNum(AuthPhoneNum);else getPhoneNum(0);}//Checking AuthorPhoeNume in Server
 setOuterWidth(outerWidth.length){this.outerWidth=outerWidth;}
 getOuterHeight(outerHeight.length){return outerHeight;}//Fetching OuterHeight in Server
 setOuterHeight(outerHeight.length){this.outerHeight=outerHeight;}
