@@ -1,9 +1,10 @@
-///WID(28/1/2026)#Degamiesign(Sarthak Mittal)1.1.1.1.1
+///WID(30/1/2026)#Degamiesign(Sarthak Mittal)1.1.1.1.1
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 App(player,renderer){
+    this.dirX=dirX;
     this.sfx=sfx;
     this.renderer=renderer;
     this.player=player;
