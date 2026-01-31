@@ -1,4 +1,4 @@
-//WID;//Impl(31/1/2026)(By Sarthak Mittal(DegamieSign))#1.1.1
+//WID;//Impl(31/1/2026)(By Sarthak Mittal(DegamieSign))#1.1.1.1
 luminicity=1;headNode=0;scene=0;Light=0;xrCam=1;camera=0;model=0;mesh=0;dirX=0;dirZ=0;shape=1;raycastOutput=1;Height=1;width=1;shape=1;dirX=0;//Var's declare and initialize
 MainWebXR(headNode){//Param constructor with Var's Binding
     this.luminicity=luminicity;
@@ -12,6 +12,7 @@ MainWebXR(headNode){//Param constructor with Var's Binding
     this.dirX=dirX;
     this.shape=shape;
     this.width=width;}
+    const setluminicity=(luminicity)=>{this.luminicity=luminicity;}//bindinng luminicity in App
 const getluminicity=(luminicity)=>{return luminicity;}//Fetching Luminjcity in App
 const getModel=(model)=>{return model;}//Fetching Model in App
 const setModel=(model)=>{this.model=model;}//Binding Model in App
