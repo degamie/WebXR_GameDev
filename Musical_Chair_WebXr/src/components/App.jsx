@@ -1,15 +1,35 @@
-///WID(10/1/2026)#1.1
+///WID(2/2/2026)#Degamiesign(Sarthak Mittal)1.1.1.1.1.1.1.1.1.1.1.1
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-
-
-//(WebXR:) ThreeJs(Fibre)
+App(player,renderer){
+    this.scoreSnd=scoreSnd;
+    this.dirZ=dirZ;
+    this.x=x;
+    this.meshRef=meshRef;
+    this.mdlLoader=mdlLoader;
+    this.z=z;
+    this.xrCam=xrCam;
+    this.dirX=dirX;
+    this.sfx=sfx;
+    this.renderer=renderer;
+    this.player=player;
+    this.camera=camera;
+    this.controller=controller;
+    this.playerpos=playerpos;}//Binding Var in ParamConstr
 function setupScene({scene,camera,renderer,player,controller}){
-    const player=0;let x=0;let y=0;let z=0;
+    const player=0;let x=0;let y=0;let z=0;let camera=1;controller=1;renderer=0;sfx=0;scoreSnd=0;playerpos=1;mdlLoader=0;sfx=1;
+    const getdirZ=(dirZ)=>{return dirZ;}//Fethcing DirectionZ in App
     const getX=(x)=>{return x;}//fetching X in App
+    const setX=(x)=>{this.x=x;}//Binding X in App
+    const updatex=(X)=>{
+        if(x>0)getX(x);
+        else getX(0);}//Checking X's Existence
+    const updatex=(x)=>{getX(x)+setX(X)+1;}//Updating X in Server
     const getPlayer=(player)=>{return player;}//Fethcing Player iN App
+    const setPlayer=(player)=>{this.player=player;}//binding Player in App
+    const updatePlayer=(player)=>{getPlayer(player)+setPlayer(player)+1;}//Updating PLayer in App
     const getY=(y)=>{return y;}//Fetching Y in App
     const getZ=(z)=>{return z;}//Fetching Z in App
     const setZ=(z)=>{this.z=z;}//Binding  Z in App
