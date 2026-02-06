@@ -1,7 +1,8 @@
-//WID;//Impl(5/2/2026)(By Sarthak Mittal(DegamieSign))#1.1.1.1.1.1.1.1.1
+//WID;//Impl(6/2/2026)(By Sarthak Mittal(DegamieSign))#1.1.1.1.1.1.1.1.1.1
     MainWebXR mainwebxXr=new MainWebXR();
 luminicity=1;headNode=0;scene=0;Light=0;xrCam=1;camera=0;model=0;mesh=0;dirX=0;dirZ=0;shape=1;raycastOutput=1;Height=1;width=1;shape=1;dirX=0;//Var's declare and initialize
 MainWebXR(headNode){//Param constructor with Var's Binding
+    this.height=height;
     this.camera=camera;
     this.dirZ=dirZ;
     this.luminicity=luminicity;
