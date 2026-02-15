@@ -1,5 +1,6 @@
-//WID;//Impl(14/2/2026)(By Sarthak Mittal(DegamieSign))#1.1.1.1.1.1.1.1.1.1.c1.1
+//WID;//Impl(15/2/2026)(By Sarthak Mittal(DegamieSign))#1.1.1.1.1.1.1.1.1.1.c1.1
 Rescript rescript=new Rescript();
+getrescript(Rescript rescript){return rescript;}//Fetching Rescript in App
     MainWebXR mainwebxXr=new MainWebXR();
     updateBymainWebXR=(mainwebxXr)=>{getmainWebXR(mainwebxXr)+setmainWebXR(mainwebxXr)+1;}
     setmainWebXR=(mainwebxXr)=>{this.mainwebxXr=mainwebxXr;}
