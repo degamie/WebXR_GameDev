@@ -1,4 +1,4 @@
-///WID(15/2/2026)#Degamiesign(Sarthak Mittal)1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1
+///WID(15/2/2026)#Degamiesign(Sarthak Mittal)1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
@@ -7,6 +7,7 @@ App app=new App();
 updateByApp=(App app)=>{return app;}
 getApp(App app){return app;}
 setApp(App app){this.app=app;}//Binding App in WeBXR
+updateByApp(App app){if(app!=null)getApp(app);else getApp(null);}//Checking App's Existence in WEBXR
 App(player,renderer){
     this.renderer=renderer;
     this.dirX=dirX;
