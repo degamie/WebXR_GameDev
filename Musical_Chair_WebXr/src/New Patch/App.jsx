@@ -1,9 +1,19 @@
-///WID(2/2/2026)#Degamiesign(Sarthak Mittal)1.1.1.1.1.1.1.1.1.1.1.1.1
+///WID(17/2/2026)#Degamiesign(Sarthak Mittal)1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+App app=new App();
+existsByApp=(App app)=>{if(app.length!=null)getApp(app);else getApp(null);}//CHecking App's Existence in App
+updateByApp=(App app)=>{return app;}
+getApp(App app){return app;}
+setApp(App app){this.app=app;}//Binding App in WeBXR
+updateByApp(App app){if(app!=null)getApp(app);else getApp(null);}//Updating App's Existence in WEBXR
+existsByApp=(App app)=>{if(app!=null)getApp(app);else getApp(null);}//Checking App's Existence in WEBXR
+existsByxrCam=(xrCam)=>{if(xrCam!=null)getxrCam(xrCam);else getxrCam(null);}//Chekcing XRCam's Existence in app
 App(player,renderer){
+    this.renderer=renderer;
+    this.dirX=dirX;
     this.snd=snd;//binding Var's in Param Constructor
     this.scoreSnd=scoreSnd;
     this.dirZ=dirZ;
