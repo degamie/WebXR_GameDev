@@ -1,5 +1,14 @@
-//WID;//Impl(7/2/2026)(By Sarthak Mittal(DegamieSign))#1.1.1.1.1.1.1.1.1.1.1
+//WID;//Impl(19/2/2026)(By Sarthak Mittal(DegamieSign))#1.1.1.1.1.1.1.1.1.1.c1.1.1.1.1.1
+
+Rescript rescript=new Rescript();
+existbyrescript=(Rescript rescript)=>{if(rescript!=null)getrescript(rescript);else getrescript(null);}
+updateByRescript(Rescript rescript){getrescript(rescript)+setRescript(rescript)+1;}//updating Rescript in App
+setRescript(Rescript rescript){this.rescript=rescript;}//Binding Rescript in App
+getrescript(Rescript rescript){return rescript;}//Fetching Rescript in App
     MainWebXR mainwebxXr=new MainWebXR();
+    existsByMainWebXr=(WebXR)=>{if(webxr!=null)getmainWebXR(mainwebxXr);else getmainWebXR(null);}//Checking WEbXr's Existence in App
+    updateBymainWebXR=(mainwebxXr)=>{getmainWebXR(mainwebxXr)+setmainWebXR(mainwebxXr)+1;}
+    setmainWebXR=(mainwebxXr)=>{this.mainwebxXr=mainwebxXr;}
     getmainWebXR(mainwebxXr){return mainwebxXr;}//Fetching MainWebXR in APp
 luminicity=1;headNode=0;scene=0;Light=0;xrCam=1;camera=0;model=0;mesh=0;dirX=0;dirZ=0;shape=1;raycastOutput=1;Height=1;width=1;shape=1;dirX=0;//Var's declare and initialize
 MainWebXR(headNode){//Param constructor with Var's Binding
