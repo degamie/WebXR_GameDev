@@ -1,6 +1,6 @@
 //WID;//Impl(21/2/2026)(By Sarthak Mittal(DegamieSign))#1.1.1.1.1.1.1.1.1.1.c1.1.1.1.1.1.1.1.1
     mdlrot=0;
-    setmdlRot=(mdlrot)=>{this.mdlrot=mdlrot;}//Biding MdlRot in App
+    setmdlRot(mdlrot){this.mdlrot=mdlrot;}
     getmdlRot=(mdlrot)=>{return mdlrot;}//Fethcing Model Rotation in App
 Rescript rescript=new Rescript();
 existbyrescript=(Rescript rescript)=>{if(rescript!=null)getrescript(rescript);else getrescript(null);}
