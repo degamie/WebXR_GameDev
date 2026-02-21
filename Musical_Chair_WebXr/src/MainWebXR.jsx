@@ -1,5 +1,41 @@
-//WID;//Impl(19/1/2026)(By Sarthak Mittal(DegamieSign))#1.1.1.1
-headNode=0;scene=0;Light=0;xrCam=0;camera=0;model=0;mesh=0;dirX=0;
+//WID;//Impl(21/2/2026)(By Sarthak Mittal(DegamieSign))#1.1.1.1.1.1.1.1.1.1.c1.1.1.1.1.1.1.1.1
+    mdlrot=0;
+    setmdlRot=(mdlrot)=>{this.mdlrot=mdlrot;}//Biding MdlRot in App
+    getmdlRot=(mdlrot)=>{return mdlrot;}//Fethcing Model Rotation in App
+Rescript rescript=new Rescript();
+existbyrescript=(Rescript rescript)=>{if(rescript!=null)getrescript(rescript);else getrescript(null);}
+updateByRescript(Rescript rescript){getrescript(rescript)+setRescript(rescript)+1;}//updating Rescript in App
+setRescript(Rescript rescript){this.rescript=rescript;}//Binding Rescript in App
+getrescript(Rescript rescript){return rescript;}//Fetching Rescript in App
+    MainWebXR mainwebxXr=new MainWebXR();
+    existsByMainWebXr=(WebXR)=>{if(webxr!=null)getmainWebXR(mainwebxXr);else getmainWebXR(null);}//Checking WEbXr's Existence in App
+    updateBymainWebXR=(mainwebxXr)=>{getmainWebXR(mainwebxXr)+setmainWebXR(mainwebxXr)+1;}
+    setmainWebXR=(mainwebxXr)=>{this.mainwebxXr=mainwebxXr;}
+    getmainWebXR(mainwebxXr){return mainwebxXr;}//Fetching MainWebXR in APp
+
+luminicity=1;headNode=0;scene=0;Light=0;xrCam=1;camera=0;model=0;mesh=0;dirX=0;dirZ=0;shape=1;raycastOutput=1;Height=1;width=1;shape=1;dirX=0;//Var's declare and initialize
+MainWebXR(headNode){//Param constructor with Var's Binding
+    this.light=light;
+    this.height=height;
+    this.camera=camera;
+    this.dirZ=dirZ;
+    this.luminicity=luminicity;
+    this.height=height;
+    this.raycastOutput=raycastOutput;
+    this.headNode=headNode;
+    this.model=model;
+    this.xrCam=xrCam;
+    this.shape=shape;
+    this.mesh=mesh;
+    this.dirX=dirX;
+    this.shape=shape;
+    this.width=width;}
+    const existsByShape=(shape)=>{if(shape!=null)getShape(shape);else getShape(0);}
+
+    const existsByluminicity=(luminicity)=>{if(luminicity>0)getluminicity(luminicity);else getluminicity(0);}//Checking Luminicity's Existence in App
+    const updateBylumincity=(luminicity)=>{getluminicity(luminicity)+setluminicity(luminicity)+1;}//Updating Luminicity in App
+    const setluminicity=(luminicity)=>{this.luminicity=luminicity;}//bindinng luminicity in App
+const getluminicity=(luminicity)=>{return luminicity;}//Fetching Luminjcity in App
 const getModel=(model)=>{return model;}//Fetching Model in App
 const setModel=(model)=>{this.model=model;}//Binding Model in App
 const updateModel=(model)=>{getModel(model)+setModel(model)+1;}//Updating Model in App
